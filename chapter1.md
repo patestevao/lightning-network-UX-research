@@ -1,4 +1,4 @@
-# Resources and Methoedology
+# Resources and Methodology
 
 The research was carried out by one professional UX designer with previous knowledge of Bitcoin’s workings, assisted by one professional programmer with a more deep technical understanding of Bitcoin. There was no budget or greater resources to be applied and the hardware used were personal laptops where the needed software was installed to run the Lightning Network transactions and an external hard drive with the up-to-date and pruned blockchain.
 
