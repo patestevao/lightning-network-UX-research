@@ -11,9 +11,7 @@ Additionally, since the focus of the research is on usability and general user e
 Three different wallets \(in testnet mode\) will be used and compared with the guidelines defined in Objective two.
 
 * [HTLC.me](https://htlc.me/): a web wallet
-
 * [Zap](https://zap.jackmallers.com/): a desktop wallet
-
 * [Eclair](https://play.google.com/store/apps/details?id=fr.acinq.eclair.wallet): a mobile wallet
 
 The scenario used to go through the wallets was the performance of simple expected operations \(sending and receiving payments\) and a basic exploration of the interface as a whole \(visiting and trying to understand the main available pages and sections\).
@@ -30,7 +28,9 @@ The first screen shows the amount available in a Bitcoin unit and in US dollar, 
 
 \(HTLC\_0\)
 
-The first operation will be an emblamatic coffee purchase, using the Startblocks demo website \([https://starblocks.acinq.co/\#/\](https://starblocks.acinq.co/#/%29\). As expected when purposing the wallet's sketches, the merchant provides both an easy way to copy or to scan the payment code. In the case of HTLC.me, only pasting or writing is possible, a scanning option would need to be implemented.
+
+
+The first operation will be an emblamatic coffee purchase, using the [Startblocks demo website](https://starblocks.acinq.co/#/). As expected when purposing the wallet's sketches, the merchant provides both an easy way to copy or to scan the payment code. In the case of HTLC.me, only pasting or writing is possible, a scanning option would need to be implemented.
 
 \(starblocks\_0\)
 
@@ -72,7 +72,7 @@ Beggining with the first opening of the wallet, it presents a dark screen with a
 
 \(zap\_12\)
 
-At the time of writing, the first experience with Zap already started with confusion for the user, because the loading process takes a long time and no explanation was given about what was loading. It looks like the user is stuck at this first page. This issue had already been pointed out in a Github issue and it appears that it is now resolved with the addition of a "Syncing to the blockchain..." message \([https://github.com/LN-Zap/zap-desktop/issues/243\](https://github.com/LN-Zap/zap-desktop/issues/243%29\).
+At the time of writing, the first experience with Zap already started with confusion for the user, because the loading process takes a long time and no explanation was given about what was loading. It looks like the user is stuck at this first page. This issue had already been pointed out in a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/243) and it appears that it is now resolved with the addition of a "Syncing to the blockchain..." message.
 
 Still on this same page, the carroussel can only be navigated by clicking the circles in the center of the page. Those circles convey the message of how many carroussel items there are and which one of them is activated. They do not, however, give the impression of being navigable links. The carroussel navegability should be improved by allowing direct control through keyboard arrows and adding some signifier on screen, such as left and right arrows, to better indicate where one should click to change items.
 
@@ -122,9 +122,9 @@ That's the page for adding a new contact, i.e., opening a channel. As they might
 
 * The label "pubkey@host" could be more helpful if it displayed an example of the numeric format that is expected, such as "022f0edb0d6a8e19320e949a6f24fd4442c390ba1f38f8349b92ee0ee6cbdece08@35.229.31.135:9735". The visual cue of what the user is looking for is very important if he doesn't know exactly what he is looking for \(as he might not know what is a pubkey or a host\).
 
-* The amount that is to be commited to a channel appears as a small detail on the bottom of the page \(it's shown after the "submit" button\) and it doesn't look very editable. It would be easy for someone to "add a contact" without even noticing that he had a choice there. This is mentioned in a Github issue: [https://github.com/LN-Zap/zap-desktop/issues/272](https://github.com/LN-Zap/zap-desktop/issues/272).
+* The amount that is to be commited to a channel appears as a small detail on the bottom of the page \(it's shown after the "submit" button\) and it doesn't look very editable. It would be easy for someone to "add a contact" without even noticing that he had a choice there. This is mentioned in a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/272).
 
-* Even for future wallets where the manual channel opening is less frequent, it would be useful to be able to add an alias or label to a new contact in order to make it more easily searchable and recognizible. This was also identified by other and put in a github issue: [https://github.com/LN-Zap/zap-desktop/issues/227](https://github.com/LN-Zap/zap-desktop/issues/227).
+* Even for future wallets where the manual channel opening is less frequent, it would be useful to be able to add an alias or label to a new contact in order to make it more easily searchable and recognizible. This was also identified by other and put in a [Github issue.](https://github.com/LN-Zap/zap-desktop/issues/227)
 
 We finally have channels open:
 
@@ -156,9 +156,9 @@ It perfectly represents the segmentation between Lightning and blockchain transa
 
 The doubt about that is the smaller number under the transaction amount is quickly answered by hovering the number and revealing that it is the transaction fee. The date of the transaction is informed, as well as if it's still pending \(represented by the clock icon that reveals an explanation when hoveren on\).
 
-The biggest experienced issue is that unconfirmed blockchain transactions are not being shown, they only appear after confirmation. This is clearly a lack of proper feedback for the user that needs to know if the transaction is on its way but, as stated in the github issue about the subject \([https://github.com/LN-Zap/zap-desktop/issues/139\](https://github.com/LN-Zap/zap-desktop/issues/139%29\), it's probably a temporary bug.
+The biggest experienced issue is that unconfirmed blockchain transactions are not being shown, they only appear after confirmation. This is clearly a lack of proper feedback for the user that needs to know if the transaction is on its way but, as stated in the [Github issue](https://github.com/LN-Zap/zap-desktop/issues/139) about the subject, it's probably a temporary bug.
 
-A suggestion for the activity filter would be to create a segmentation in three main categories \(All, Lightning and Blockchain\) and use tabs instead of a drop-down, which has poorer discoverability. And, when in the Lightning tab, a submenu could appear with more refined options, such as sent, received, pending, invoices and complete. A different suggestion on the same theme was purposed on a Github issue, as well: [https://github.com/LN-Zap/zap-desktop/issues/250](https://github.com/LN-Zap/zap-desktop/issues/250).
+A suggestion for the activity filter would be to create a segmentation in three main categories \(All, Lightning and Blockchain\) and use tabs instead of a drop-down, which has poorer discoverability. And, when in the Lightning tab, a submenu could appear with more refined options, such as sent, received, pending, invoices and complete. A different suggestion on the same theme was purposed on a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/250), as well.
 
 With all the tasks completed, some extra comments about the interface are due:
 
@@ -166,7 +166,7 @@ With all the tasks completed, some extra comments about the interface are due:
 
 Some messages displayed during the use of the wallet have a funny/playful tone that might not be appropriate to the situation. A wallet is a financial application, the users need clear messages and shouldn't be put in a playful mood because the operations they are performing might result in financial loss.
 
-There is an issue that will be less frequent with an automated channel management, but an issue nonetheless. If you open multiple channels with the same peer, you have no warning or indication of that and the channels appear as completely different. That breaks the conceptual model of "contacts" that is passed on Zap \(you can't have two equal contacts that appear as different ones\). That is pointed out here on Github: [https://github.com/LN-Zap/zap-desktop/issues/252](https://github.com/LN-Zap/zap-desktop/issues/252). And the suggestion presented by this research is to either drop the "contact" analogy and call it a "channel" or to recognize repeated peers and group its channels under one name/pubkey.
+There is an issue that will be less frequent with an automated channel management, but an issue nonetheless. If you open multiple channels with the same peer, you have no warning or indication of that and the channels appear as completely different. That breaks the conceptual model of "contacts" that is passed on Zap \(you can't have two equal contacts that appear as different ones\). That is pointed out here on [Github](https://github.com/LN-Zap/zap-desktop/issues/252). And the suggestion presented by this research is to either drop the "contact" analogy and call it a "channel" or to recognize repeated peers and group its channels under one name/pubkey.
 
 \(zap\_17\)
 
