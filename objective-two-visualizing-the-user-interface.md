@@ -2,7 +2,7 @@
 
 The stage of restricted use and high risk described in Objective 1 is expected to end in its due time when the development reaches a more mature state and the Lightning Network will evolve to be part of regular user interfaces, as it is the case with common Bitcoin wallets. The mental exploration of what those interfaces should look like is the second objective of this study.
 
-### Phase 1 wallets
+## Phase 1 wallets
 
 Let's call the stage with no user interface available the Phase 0 of the Lightning Network development. Phase 1 would be, then, the following stage, where the first interfaces are already functional and compatible with the abilities of the 3 described users.
 
@@ -20,6 +20,8 @@ In order to imagine what the wallet should look like, we are going to do a task 
 
 The guidelines and wireframe sketches on this section are limited to specific tasks and situations that were prioritized in the explanation, but this doesn't mean a real implementation of a Lightning wallet should limit itself to only these operations. They are purposefully low fidelity drawings, in order to focus on the elements and the general architecture instead of aesthetic aspects of design. In addition, the suggested structures are not being presented as the only forms of designing good user interfaces, they are just an approach to visualize the elements that should be prioritizes when doing so.
 
+### Setting up the wallet
+
 The first flow is common to all Bitcoin wallets, not only the ones for the Lightning Network. Nevertheless, it's such a crucial part of the interface that it will be included here anyway, with the following sketches and items being used to hightlight usability concerns of this implementation.
 
 1. Setting up the wallet for the first time \(same as to regular Bitcoin wallet\)
@@ -29,117 +31,128 @@ The first flow is common to all Bitcoin wallets, not only the ones for the Light
 5. Other security setups \(passphrase, 2FA, etc\).
 6. Wallet is ready.
 
-7. First screen should be a simple choice of creating or recovering a wallet. With the "Creating new wallet" button more prominent since that's what "clueless" users will likely want to do and they should be indicated that that's the most common choice.
+#### Set up pages
 
-8. Wallet backup should come next and work an interlock, i.e., the user should be constrained to begin using the wallet without going through the backup steps.
-9. The seed \(BIP39\) scheme is the more user friendly form of backup.
-10. Clear but short instructions about what to do with the mnemonic code and its importance should be given. It could be organized in bullet points or other short structure, aided by the use of bold or differentiated characters to highlight important parts. A link to a more detailed explanation of how to make a safe backup is a good call and should be more prominent than the text, but less than the list of words. That way it gets user attention but doesn't distract the person when she's writing down the words.
-11. Mnemonic code should be organized in a clear way, with no ambiguity in the order of words and, preferencially, numbered \(so the user can see more quickly if he's missed a word\).
-12. The software should avoid triggering mobile behavior of capitalizing first words, as it will make a otherwise valid word appear as invalid, causing user confusion.
-13. The verification of words is important to make sure the user didn't make a mistake in the copying process. All words can be requested one at a time, or an incomplete list can be shown for them to complete the missing ones. The latter will be more effective in the verification, although it will require more time and effort from the user.
-14. Wrong words should be hightlighted readly after the user writes them and not only when he tries to verify the whole list \(specially valid if the interface is not asking one word at a time\).
-15. A list of suggested words based on the partial user input can accelerate the verification process and give a quicker feedback if he has the correct words.
-16. A option to generate a new seed should be available in case the user realizes he's made great mistakes in the copying process \(or maybe skip the copying altogether because he thought he could get away with it\).
-17. Other security setups might be prompted to the user, such as password settings and 2FAs, but they should be able to go through without completing it \(given that the proper warning is displayed\) and he should be able to set those up at any time in the settings section inside the app.
+![](/assets/wallet_greeting.png)
+
+![](/assets/wallet_seed.png)
+
+![](/assets/verify_seed.png)
+
+Comments about the interface:
+
+* The first screen should be a simple choice of creating or recovering a wallet. With the "Creating new wallet" button more prominent since that's what "clueless" users will likely want to do and they should be indicated that that's the most common choice.
+* Wallet backup should come next and work an interlock, i.e., the user should be constrained to begin using the wallet without going through the backup steps.
+* The seed \(BIP39\) scheme is the more user friendly form of backup.
+* Clear but short instructions about what to do with the mnemonic code and its importance should be given. It could be organized in bullet points or other short structure, aided by the use of bold or differentiated characters to highlight important parts. A link to a more detailed explanation of how to make a safe backup is a good call and should be more prominent than the text, but less than the list of words. That way it gets user attention but doesn't distract the person when she's writing down the words.
+* Mnemonic code should be organized in a clear way, with no ambiguity in the order of words and, preferencially, numbered \(so the user can see more quickly if he's missed a word\).
+* The software should avoid triggering mobile behavior of capitalizing first words, as it will make a otherwise valid word appear as invalid, causing user confusion.
+* The verification of words is important to make sure the user didn't make a mistake in the copying process. All words can be requested one at a time, or an incomplete list can be shown for them to complete the missing ones. The latter will be more effective in the verification, although it will require more time and effort from the user.
+* Wrong words should be hightlighted readly after the user writes them and not only when he tries to verify the whole list \(specially valid if the interface is not asking one word at a time\).
+* A list of suggested words based on the partial user input can accelerate the verification process and give a quicker feedback if he has the correct words.
+* An option to generate a new seed should be available in case the user realizes he's made great mistakes in the copying process \(or maybe skip the copying altogether because he thought he could get away with it\).
+* Other security setups might be prompted to the user, such as password settings and 2FAs, but they should be able to go through without completing it \(given that the proper warning is displayed\) and he should be able to set those up at any time in the settings section inside the app.
+
+### Making a Payment
 
 The second flow consists on sending a transaction in the Lightning Network. This scenario counts on the user having external access to the address he wants to send money to.
 
 1. Wants to send a transaction via Lightning Network
-
 2. Opens payment section.
-
 3. Pastes/writes/scans payment code/address.
-
 4. Writes amount to be sent \(in case it wasn't specified in the payment code\).
-
 5. Optionally, writes a label for that transaction.
-
 6. Hits "PAY".
 
-7. The option of writing, scaning a QR code or simply copy/pasting the address that should receive the money is already widely adopted in Bitcoin applications, but it's important to mention it as a best practice, anyway.
+#### Payment page
 
-8. When the user inputs the address or lightning payment code, the wallet should promptly give the feedback of what type of address is that \(Lightning or blockchain\).
+![](/assets/pay_normal_fee.png)
 
-9. The idea of a self-bootstrapped wallet is that it will connect itself to a number of relevant peers in a way that, in most cases, there will already be a route for any payment the user might want to make. Nevertheless, it might come a time, specially in these early stages of the network, that a path can't be found and the wallet will need to open a channel before doing the Lightning transaction. In that case, the best option is to warn the user that the transaction will take longer and require an extra fee, because it will need to make a blockchain transaction to open a channel.
+![](/assets/pay_high_fee.png)
 
-10. As it was already stated, the process of opening new channels should be automated by the wallet's backend, removing any burden from the user having to perform this operation manually. Nevertheless, the user should be able to add peers manually if he specifically desires so. The possiblities of how this should be implemented will be discussed further.
+Comments about the interface:
 
-11. The fee estimation for the route chosen by the wallet's backend should be displayed, as well, with a warning if the fee seems too high. The definition of a high fee could be a market stablished one that is used by default, with the possibility of the user setting his own threshold in the settings section.
+* The option of writing, scaning a QR code or simply copy/pasting the address that should receive the money is already widely adopted in Bitcoin applications, but it's important to mention it as a best practice, anyway.
+* When the user inputs the address or lightning payment code, the wallet should promptly give the feedback of what type of address is that \(Lightning or blockchain\).
+* The idea of a self-bootstrapped wallet is that it will connect itself to a number of relevant peers in a way that, in most cases, there will already be a route for any payment the user might want to make. Nevertheless, it might come a time, specially in these early stages of the network, that a path can't be found and the wallet will need to open a channel before doing the Lightning transaction. In that case, the best option is to warn the user that the transaction will take longer and require an extra fee, because it will need to make a blockchain transaction to open a channel.
+* As it was already stated, the process of opening new channels should be automated by the wallet's backend, removing any burden from the user having to perform this operation manually. Nevertheless, the user should be able to add peers manually if he specifically desires so. The possiblities of how this should be implemented will be discussed further.
+* The fee estimation for the route chosen by the wallet's backend should be displayed, as well, with a warning if the fee seems too high. The definition of a high fee could be a market stablished one that is used by default, with the possibility of the user setting his own threshold in the settings section.
+* Alternatively, if the fee threshold is available in a Settings section, the development team might choose not to display the fee every time to avoid excessive information. In this case, it should be displayed only when the fee is considered too high.
+* Amount can be written in the Bitcoin field or in the fiat currency field, with one autocompleting the other using the current Bitcoin price. Both the fiat currency and the unit of Bitcoin should be available for personal setup in the settings section.
 
-12. Alternatively, if the fee threshold is available in a Settings section, the development team might choose not to display the fee every time to avoid excessive information. In this case, it should be displayed only when the fee is considered too high.
-
-13. Amount can be written in the Bitcoin field or in the fiat currency field, with one autocompleting the other using the current Bitcoin price. Both the fiat currency and the unit of Bitcoin should be available for personal setup in the settings section.
+### Requesting a payment
 
 The third basic flow to be covered is the request of a payment. The publication of the payment information will be handled outside the wallet client \(e.g. sending by e-mail\), unless the payer is phisically present so he's able to scan the QR code information.
 
 1. Wants to receive a transaction via Lightning Network
-
 2. Opens request section.
-
 3. Optionally writes amount to be requested.
-
 4. Optionally writes label for the request.
-
 5. Click "REQUEST" button.
-
 6. Send/publish payment request.
-
 7. Wait for payment to be completed by other party.
 
-8. Like the PAY section, it should be possible to add the amount in fiat currency or BTC. The one provided will be used by the wallet to autocomplete the equivalent amount in the other currency based on updated price.
+#### Request page
 
-9. The top of this section should present an easily perceivable option of "Lightning payment" or "Funding wallet" in case the user wants to see a blockchain address to add funds to the wallet. The default, however, should have the Lightning payment selected, since it's the main use of this wallet.
+![](/assets/request_lightning.png)
 
-10. When the "Funding wallet" option is selected, the screen should show a regular Bitcoin request, with a blockchain address available to receive transactions.
+![](/assets/request_blockchain.png)
 
-11. When the "Lightning payment" is selected, a link to show the "network address" should be available, in case the user wants to give a way for others to open a channel directly with his client.
+Comments about the interface:
 
-12. When clicking the "REQUEST" button, the payment code should be displayed on the same screen so that the user can check if the information he provided was correct. But the information should not be editable anymore, to make it clear that he will have to generate a new code in case any input changes.
+* Like the PAY section, it should be possible to add the amount in fiat currency or BTC. The one provided will be used by the wallet to autocomplete the equivalent amount in the other currency based on updated price.
+* The top of this section should present an easily perceivable option of "Lightning payment" or "Funding wallet" in case the user wants to see a blockchain address to add funds to the wallet. The default, however, should have the Lightning payment selected, since it's the main use of this wallet.
+* When the "Funding wallet" option is selected, the screen should show a regular Bitcoin request, with a blockchain address available to receive transactions.
+* When the "Lightning payment" is selected, a link to show the "network address" should be available, in case the user wants to give a way for others to open a channel directly with his client.
+* When clicking the "REQUEST" button, the payment code should be displayed on the same screen so that the user can check if the information he provided was correct. But the information should not be editable anymore, to make it clear that he will have to generate a new code in case any input changes.
+* A link to "generate new request" should be provided in case the user does want to change any inputs. By clicking it, the input information should become editable again \(preferencially not being erased\) and the previously generated code should be erased.
+* The payment code should be selectable \(for copying\).
+* It would improve usability to also have the buttons for directly copying the code and to show its representation as a QR code.
 
-13. A link to "generate new request" should be provided in case the user does want to change any inputs. By clicking it, the input information should become editable again \(preferencially not being erased\) and the previously generated code should be erased.
+### Extra pages
 
-14. The payment code should be selectable \(for copying\).
-
-15. It would improve usability to also have the buttons for directly copying the code and to show its representation as a QR code.
+#### Dashboard page
 
 Now that the most basic flows were covered, let's take a look at other relevant pages, starting with how the dashboard page \(the main page the user sees when he enters the wallet\) could look like.
 
+![](/assets/dashboard.png)
+
+Comments about the interface:
+
 * The PAY and REQUEST button should be the more prominent elements of the screen, since they are the main actions a user would need.
-
 * In the case of desktop or browser wallets, it would be best to make the PAY and REQUEST button available in all screens. This might not be optimal in mobile wallets because of limited space and clutter.
-
 * A summarized display of the wallets funds should be seen, with the separation of total funds, available funds and funds commited to Lightning channels.
-
 * The main items to show on the navigation are: dashboard page, Wallet page \(where all transactions can be seen\), Channels page \(where channels can be seen and managed\) and Settings page. These items should be visible for an easy discovery, while other necessary items can be less visible if there isn't much available space for displaying or if there are too many items and a visual hierarchy has to be applied. For example, if building a mobile application, the four main items could be in a tab-style navigation, while the others could be in a hidden menu.
-
 * This page is also where general warnings and messages should be prompted to the user, such as that a new version is available or that some setting should be reviewed, etc.
-
 * The current exchange price of Bitcoin might also be displayed in a more subtle manner, while this is considered a relevant information by most users.
+
+#### Wallet page
+
+![](/assets/wallet.png)
 
 As for the "wallet" page, where transactions will be shown, the main issue is to make a differentiation between lightning and blockchain transactions. Other options such as beign able to filter transactions by type \(blockchain, Lightning Payment, Lightning request, all Lightning\) are also nice to have. Apart from that, the already stablished best practices for displaying transactions should be applied, such as ordering from most to less recent, showing number of confirmations, displaying the chosen label \(when there is one\), giving a link to a blockexplorer service, color coding the receipt and send of money, etc.
 
 In this particular sketch of a mobile wallet, the transaction rows are links to the expanded transaction information, due to the lack of space for directly displaying everything.
 
+#### Channels page
+
+![](/assets/channels.png)
+
 The last page to be analyzed will be the Lightning channels section. The most important elements to be considered:
 
 * List of channels with information about the peer, amount commited and the current status of the channel.
-
 * Possibility of manually opening a channel with a specific peer.
-
 * Filter for channels based on their status would be a nice to have.
 
-Phase 2 wallets
+## Phase 2 wallets
 
 Phase 2 wallets will be the clients developed in a future state of the network, when the technology is more mature and tested. In that scenario, the proper interface will not put any burden of performing different operations for Lightning transaction or regular Bitcoin transactions on the user. The same wallet will be used for any type of transaction and the software will be responsible for recognizing and act accordingly to the type of transaction that is expected.
 
 Let's explore the same three activities we analyzed on Phase 1 wallets.
 
 1. Wallet setting: will be based on the same principles, so no further analysis is necessary.
-
 2. Sending payment and 3. Requesting payment: the basic flow should be exactly the same, only, now, the wallet will have both blockchain and lightning transactions with the same degree of importance to the user. The following items and sketches will highlight the differences that should be expected in this type of wallet.
-
 3. On the REQUEST page, a more advanced option of for blockchain transactions should be implemented, giving the user the possibility of creating a more complete request \(with the amount already filled in\). In order to avoid unnecessary clutter, since it's very common for users to just want the address, this should be hidden under a "advanced options" link.
-
 4. The page for Lightning channels will be less important in the general wallet hierarchy, because the opening and closing of channels should be even more seamless for the user. At the same time, it has to continue existing so users can manually open channels if they have that need. The solution is to remove this section from the main navigation elements and put it in a hidden or contextual menu \(in case there's reason for a Lighting submenu\).
 
 The conclusion we can take from the Phase 2 analysis is that the main differences will occur in the wallet's backend and in the conceptual model passed to the user that this is now an "all-purpose" wallet. The interface itself will need very few modifications. Nevertheless, the usage simplification of only needing one wallet, together with the fact that more standards and best practices will be stablished by then is the necessary evolution that will fully integrate Jennifer, our third persona, as a user of the Lightning Network.
