@@ -1,6 +1,6 @@
 # Summary
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+As the Lightning Network comes to life thanks to the work of various professionals that committed themselves to make it happen, the need for an interface that will communicate the technology to users also arises. Throughout this study, we will discuss what is the current situation of that interaction between users and Lightning payments; we will comment on the design process of creating an interface thinking about the people for whom it is for and, consequently, propose the main elements that should figure in a usable application; and, lastly, we will review three different existing projects that are still on development but are some of the main known efforts for creating user interfaces for the Lightning Network.
 
 ## Motivation
 

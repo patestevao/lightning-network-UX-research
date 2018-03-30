@@ -1,6 +1,6 @@
 # Resources and Methodology
 
-The research was carried out by one professional UX designer with previous knowledge of Bitcoin’s workings, assisted by one professional programmer with a deeper technical understanding of Bitcoin. There was no budget or greater resources to be applied and the hardware used were personal laptops where the needed software was installed to run the Lightning Network transactions and an external hard drive with the up-to-date and pruned blockchain.
+The research was carried out by one professional UX designer with previous knowledge of Bitcoin’s workings, assisted by one professional programmer with a deeper technical understanding of Bitcoin. There was no budget or greater resources to be applied and the hardware used was personal laptops, where the needed software was installed to run the Lightning Network transactions, and an external hard drive with the up-to-date and pruned blockchain.
 
 The method of UX research chosen was the Heuristic Evaluation.
 
@@ -8,8 +8,8 @@ The method of UX research chosen was the Heuristic Evaluation.
 
 There were two main reasons for that choice:
 
-* The scarcity of resources to be deployed wouldn’t allow for a more complete research, since methods that include a interaction with system users \(usability testing, field studies, focus groups, etc\) require financial investment.
-* The current state of the Lightning Network isn’t that of a product that can be easily tested by users, the possible actions are still very limited, there’s no functional user interface and the difficulties one encounter require specific knowledge to be overcome.
+* The scarcity of resources to be deployed wouldn’t allow for a complete research since methods that include a interaction with system users \(usability testing, field studies, focus groups, etc\) require a financial investment.
+* The current state of the Lightning Network isn’t that of a product that can be easily tested by users. The possible actions are still very limited, there’s no functional user interface and the difficulties one encounter require specific knowledge to be overcome.
 
 The heuristics or principles of User Interface Design used as guides for the analysis were as stated by Nielsen \(1995\), and can be listed as follows:
 
@@ -26,5 +26,5 @@ The heuristics or principles of User Interface Design used as guides for the ana
 
 The summarized explanation for each principle can be found in the [author’s article](https://www.nngroup.com/articles/ten-usability-heuristics/).
 
-In order to guide the evaluators, the research also included a simplified construct of user personas and journeys. They were formed based on a general manifestation of the users profile and objectives which can be taken of public space discussions such as social media.
+In order to guide the evaluators, the research also included a simplified construct of user personas and journeys. They were formed based on a general manifestation of the user's profile and objectives which can be taken of public space discussions such as social media.
 
