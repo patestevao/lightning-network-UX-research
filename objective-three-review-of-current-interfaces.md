@@ -1,38 +1,36 @@
 # Objective three: review of current interfaces
 
-The final section of this research will go through the current implementations of Lightning Network wallets with graphic user interfaces to point out the main good and bad design decisions that are being made. We have to consider, of course, that all the candidate clients for analysis are in a very early stage of development and are not actually functional yet. Due to that, there will be an effort to differentiate between what seems to be a design choice and what is a temporary implementation bug, since only the latter is relevant here.
+The final section of this research will go through the current implementations of Lightning Network wallets with graphic user interfaces to point out the main good and bad design decisions that are being made. We have to consider, of course, that all the candidate clients for analysis are in a very early stage of development and are not actually functional yet. Due to that, there will be an effort to differentiate between what seems to be a design choice and what is a temporary implementation bug, since only the former is relevant here.
 
-Also, some of these wallets might have been created with demonstrative purposes only and, because of that, consciously didn't worry about details and usability issues. Even though, In order to make an equivalent analysys of all of them, they will be considered here
+Another relevant thought is that some of these wallets might have been created with demonstrative purposes only and, because of that, developers consciously didn't worry about details and usability issues. Even so, they will all be considered here as wallets on the process of improvement, so any relevant issue will be pointed out in a way that it can theoretically be corrected in the future.
 
-Also, some of these wallets might have been created with demonstrative purposes only and, because of that, consciously didn't worry about details and usability issues. Even though, they will all be considered here as wallets on the process of improvement, so any relevant issue will be pointed out so it can theoretically be corrected in the future.
+Additionally, since the focus of the research is on usability and general user experience on the Lightning Network, aesthetics considerations will only be made when they directly affect those aspects \(e.g., a cluttered interface that increases cognitive load, fonts that are too small to read, etc\).
 
-Additionally, since the focus of the research is on usability and general user experience on the Lightning Network, aesthetics considerations will only be made when they directly affect those aspects \(e.g. cluttered interface that increases cognitive load, fonts that are too small to read, etc\).
+Three different wallets will be used \(in testnet mode\) and compared with the guidelines defined in Objective two.
 
-Three different wallets \(in testnet mode\) will be used and compared with the guidelines defined in Objective two.
+* [HTLC.me](https://htlc.me/): a web wallet.
+* [Zap](https://zap.jackmallers.com/): a desktop wallet.
+* [Eclair](https://play.google.com/store/apps/details?id=fr.acinq.eclair.wallet): a mobile wallet.
 
-* [HTLC.me](https://htlc.me/): a web wallet
-* [Zap](https://zap.jackmallers.com/): a desktop wallet
-* [Eclair](https://play.google.com/store/apps/details?id=fr.acinq.eclair.wallet): a mobile wallet
+The scenario followed when going through the wallets was that of the execution of simple expected operations \(sending and receiving payments\) and a basic exploration of the interface as a whole \(visiting and trying to understand the main available pages and sections\).
 
-The scenario used to go through the wallets was the performance of simple expected operations \(sending and receiving payments\) and a basic exploration of the interface as a whole \(visiting and trying to understand the main available pages and sections\).
+The first important observation is that some of the current implementations do not open channels automatically for the user, requiring them to search for the peer they need to connect to and manually open a channel. This wasn't even considered as an early development necessity in Objective two because the required network structure for automatic opening of channels already exists as [LND's autopilot feature](http://dev.lightning.community/overview/#network-topology). Although the network discovery methods will probably improve over time, the removal of the main burden of opening channels manually can begin right now. The expectation of the researcher is that, by the time functional releases for mainnet use are being distributed, this feature will have been implemented by the development team of all these interfaces.
 
-The first important observation is that some of the current implementations do not open channels automatically for the user, requiring them to search for the peer they need to connect to and manually open a channel. This wasn't even considered as an early development necessity in Objetive two because the required network structure for automatic opening of channels already exists as LND's autopilot feature. Although the network discovery methods will probably improve over time, the removal of the burden of opening channels manually can begin right now. The expectation is that, by the time functional releases for mainnet use are being distributed, this feature will have been implemented by the development team of all these interfaces.
-
-Another general aspect of the current wallets is that, probebly due to the early development stage and the fact that they are only being used as testnet wallets, they didn't implement a proper set up for wallet security and backup. That's not a big issue if it's fixed before the wallet becomes usable in the mainnet.
+Another general aspect of the current wallets is that, probably due to the early development stage and the fact that they are only being used as testnet wallets, not all of them have implemented a proper set up for the wallet regarding the security and backup. That's not a big issue if it's fixed before the wallet becomes usable in the mainnet.
 
 ### HTLC.me
 
-HTLC.me is a web based wallet created by Alex Bosworth with the basic necessities for the Lightning Network operation. The test was conducted with the wallet's running version in the last week of March, 2018 using the Firefox Quantum 59.0.1 browser. Its greater strength is that it's very straightforward in its use and its greater issue is the lack of options and explanations for each activity. These aspects are a type of counterbalance and HTLC.me weights too much on the first side.
+[HTLC.me](https://htlc.me/) is a web-based wallet created by [Alex Bosworth](https://twitter.com/alexbosworth) with the basic necessities for the Lightning Network operation. The test described below was conducted with the wallet's running version in the last week of March 2018 using the Firefox Quantum 59.0.1 browser. The greater perceived strength of the wallet is that it's very straightforward in its use and its greater issue is the lack of options \(user freedom and control\) and explanations for each activity. These aspects might be considered a counterbalance to each other and HTLC.me weights too much on the first side.
 
 The first screen shows the amount available in a Bitcoin unit and in US dollar, as well as the three main sections of the wallet: send, receive and network. The wallet doesn't allow a blockchain funding operation, instead, it starts itself with the amount of 0.00016000 tBTC. This is probably due to the merely demonstrative purpose I mentioned before.
 
 ![](/assets/HTLC_0.png)
 
-The first operation will be an emblamatic coffee purchase, using the [Startblocks demo website](https://starblocks.acinq.co/#/). As expected when purposing the wallet's sketches, the merchant provides both an easy way to copy or to scan the payment code. In the case of HTLC.me, only pasting or writing is possible, a scanning option would need to be implemented.
+Since there's no setup process available for this wallet, the first operation will be an emblematic coffee purchase, using the [Startblocks demo website](https://starblocks.acinq.co/#/). As expected when proposing the wallet's sketches, the merchant provides both an easy way to copy or to scan the payment code. In the case of HTLC.me, only pasting or writing is possible, a scanning option would need to be implemented.
 
 ![](/assets/starblocks_0.png)
 
-As soon as the payment code is pasted, the available information about the purchase is displayed. A perfectly timed feedback for the user before he confirms the payment.
+As soon as the payment code is pasted, the available information about the purchase is displayed. It's a perfectly timed feedback for the user before he confirms the payment.
 
 ![](/assets/HTLC_2.png)
 
@@ -40,25 +38,25 @@ After sending the payment, a confirmation screen with the transaction details is
 
 ![](/assets/HTLC_4.png)
 
-The second step is to request a payment, which is made in the Receive tab by entering the desired amount you wish to receive. Here, an interlock is applied by only making the "Request Payment" button available after an amount is written down. This is a good application of an anti-affordance that tells the user that a payment request can only be generated with an amount. On the other hand, it might create a moment of confusion in case the user tries to understand how to generate the payment before writing anything in the amount field, because there' no available button. A better approach could be to display the button in an "off-mode", i.e., with a style that indicates that it's disabled \(such as a light/greyish color and no link behavior on hover\).
+The second step is to request a payment, which is made in the Receive tab by entering the desired amount you wish to receive. Here, an interlock is applied by only making the "Request Payment" button show up after an amount is written down. This is a good application of an anti-affordance \(a lack of functionality that communicates the proper behavior\) that tells the user that a payment request can only be generated if an amount is provided. On the other hand, it might create a moment of confusion in case the user tries to understand how to generate the payment before writing anything in the amount field because there will be no available button. A better approach could be to display the button in an "off-mode", i.e., with a style that indicates that it's disabled \(such as a light/greyish color and no link behavior on hover\).
 
-\(HTLC\_4\) \(HTLC\_5\)
+\(HTLC\_12\)
 
-After generating the payment, the payment code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option is also provided for browser notification when the payment is received. The "reload" icon remains a mistery. If there was a title tag on the image, it could have given a better explanation of its function but, in this current setup, it's a button with no apparent effect when pressed.
+After generating the payment, the code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option \(the button with a bell icon\) is also provided for enabling browser notification when the payment is received. The button with a "reload" icon remains a mystery as its function couldn't be understood. If there was a title tag on the image, it could have given a better explanation of its purpose but, in this current setup, it's a button with no apparent effect when pressed.
 
-\(HTLC\_6\) \(HTLC\_9\)
+\(HTLC\_13\)
 
 Here's the feedback when the payment is received:
 
 \(HTLC\_10\) \(HTLC\_11\)
 
-Note that no manual channel opening was required until now. That's because the HTLC.me already starts itself with a list of connected peers, as it can be seen in the Network section.
+Note that no manual channel opening was required until now. That's because HTLC.me already starts itself with a list of connected peers, as it can be seen in the Network section.
 
 ![](/assets/HTLC_7.png)
 
-That's exactly what was mentioned before about removing the burden of opening channels of the user's shoulders, and HTLC.me does it quite well. What it apparently doesn't cover is the possibility of a user wanting to open a channel with a specific peer that doesn't appear on the directory.
+That's exactly what was mentioned before about removing the burden of opening channels of the user's shoulders, and HTLC.me does it quite well. What it apparently doesn't cover is the possibility of a user wanting to open a channel with a specific peer that doesn't appear in the directory.
 
-The Network directory is also where the user's own peer address is shown, which is a place that makes contextual sense.
+The Network directory is also where the user's own peer address is shown, which, even though is not the placement that was suggested in Objective 2, it is a place that makes contextual sense.
 
 ### Zap
 
