@@ -125,7 +125,7 @@ We finally have channels open:
 
 ![](/assets/zap_3.png)
 
-This page of the interface has some very good elements, such as the searching option, a filter for contacts, a refresh option \(which could have a refresh icon next to it to call more attention\), and a clear display of the state for each contact that is both written and color coded. As for the possible improvements: the already mentioned addition of an alias to each contact and the bad contrast in the "Add +" button \(same as in the PAY and REQUEST buttons\). 
+This page of the interface has some very good elements, such as the searching option, a filter for contacts, a refresh option \(which could have a refresh icon next to it to call more attention\), and a clear display of the state for each contact that is both written and color coded. As for the possible improvements: the already mentioned addition of an alias to each contact and the bad contrast in the "Add +" button \(same as in the PAY and REQUEST buttons\).
 
 The division of the amount in the channel between "Can Pay" and "Can Receive" is an extra load on the user if he has to keep track of this for every transaction. But in the future case that this page is only eventually used for deliberate manual operations, it can add valuable information.
 
@@ -183,85 +183,87 @@ The moment of suggesting options and trying them out is really now, so Zap's cho
 
 ### Eclair
 
-Eclair is the mobile wallet built by [ACINQ](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e) and it's idealized already as a Phase 2 wallet, meaning it's supposed to be a global wallet for Bitcoin transactions. Some of those might happen to be Lightning transactions while the others will be blockchain transactions, there shouldn't be a design priority for Lightning activity. All that with the promisse of a user-friendly experience.
+Eclair is the mobile wallet built by [ACINQ](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e) and it's idealized already as a Phase 2 wallet, meaning it's supposed to be a global wallet for Bitcoin transactions. Some of those might happen to be Lightning transactions while the others will be blockchain transactions. The idea here is that there shouldn't be a design priority for Lightning activity. All that with the promise of a user-friendly experience.
 
 For this study, the installed version was the 0.2.5 in an Android version 5.1.
 
-When you first start the wallet, you can see that it's already providing a set up operation with the display of the recovery seed and the verification of the mnemonic words.
+When you first start the wallet, you can see that it's already providing a setup operation with the display of the recovery seed and the verification of the mnemonic words.
 
 ![](/assets/eclair_15.png)
 
-It violates some aspects of what was described in the set up flow in Objective 2, such as the proper spacing, alignment and numeric cues for the mnemonic code. However, since the focus of the analysis is the Lightning activity and the team might have the improvement of this page on their roadmap, we'll take the option of skipping backup altogether \(that will be the case only because it's a testnet wallet\).
+It violates some aspects of what was described in the setup flow in Objective 2, such as the proper spacing, alignment and numeric cues for the mnemonic code. However, since the focus of the analysis is the Lightning activity and the team might have the improvement of this page on their roadmap, we'll take the option of skipping the backup altogether \(that will only be the case because it's a testnet wallet\).
 
-A first important difference of Eclair is that it takes advantage of the first moment the user arrives in the app to give a very short but very useful tour through the wallet. That doesn't take away any of the importance of an intuitive and clear interface, but it does make the user more confortable with this first contact. It's important to notice that the positive impact of the tour would rapidly be lost and turned into anoyance and confusion if the explanation was too long \(long explanation texts or too many points being explained\).
+A first important distinction of Eclair is that it takes advantage of the first moment the user arrives in the app to give a very short but very useful tour through the wallet. That doesn't take away the importance of an intuitive and clear interface, but it does make the user more comfortable with this first contact. It's important to notice that the positive impact of the tour would rapidly be lost and turned into annoyance and over-informing if the explanation was too long, whether it was occasioned by long explanation texts or by too many points being explained.
 
 ![](/assets/eclair_16.png)
 
-So now that we need to fund the wallet before beggining the payment task, as it was the case with Zap, we already know where to look.
+So, now that we need to fund the wallet before beginning the payment task, as it was the case with Zap, we already know where to look.
 
 ![](/assets/eclair_1.png)
 
-After funding, we'll make a similar purchase as it was done with the other wallets, using Starblocks. We have an idea of where to go for the payment because of the tour but, buy now, the user could already have forgotten the instructions, he could have waited days from the moment he setup the wallet to his first Lightning transaction, that's why a clear interface is always the priority.
+After funding, we'll make a similar purchase as it was done with the other wallets, using Starblocks. We have an idea of where to go for the payment because of the tour but, buy now, the user could have already forgotten the instructions, he could even have waited days from the moment he started the wallet to his first Lightning transaction. That's why a clear interface should always be the priority.
 
 ![](/assets/eclair_18.png)
 
-In this case, although it looks very good aesthetically, the button for sending a transaction doesn't draw enough attention to itself. It does follow a common pattern in apps that put a small circular button on the bottom right corner of the page and the chosen icon does convey the "send" message. But, if the choice of not having a clear "PAY" button available is to be maintained, this circular button should, at least, be in different more bright color and, possibly, a little larger.
+In this case, although it looks very good aesthetically, the button for sending a transaction doesn't draw enough attention to itself. It does follow a common pattern in mobile apps that put a small circular button on the bottom right corner of the page, and the chosen icon does convey the "send" message. But, if the choice of not having a clear "PAY" button available is to be maintained, this circular button should, at least, be in a different and more bright color and, possibly, a little larger.
 
-This also raises the question of where will the button for a Lightning network request will be in the future. As they properly explain in [their post](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e), the Eclair team justifies that the request of Lightning payments is disabled for the moment so that it doesn't appear as a broken feature until the proper backend structure is ready. But this will be available sometime in the future, which might lead to a questioning of the current "SEND" button. If the same button is to be used for payment and requests, the icon used will be innappropriate and should be replaced with something more generic for financial transactions. If it isn't placed in the same button, it will either mean that another button will be displayed in the transactions page or that this functionality will be moved to a different section. In the first case, the pattern of the circular button will make less sense, as it is normally used as one button only. In the second case, it will probably result in the "Your Bitcoin Adress" section being transformed into a generic "payment request" section. No matter what choice is made, it will probably result in a revision of this "SEND" button.
+This also raises the question of where will the button for a Lightning network request be in the future. As they properly explain in [their post](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e), the Eclair team justifies that the request of Lightning payments is disabled for the moment so that it doesn't appear as a broken feature until the proper backend structure is ready. But this will be available sometime in the future, which might lead to a questioning of the current "SEND" button. If the same button is to be used for payment and requests, the paper airplane icon used will be inappropriate, as it doesn't convey the message of "requesting", and should be replaced with something more generic for financial transactions. If it isn't placed in the same button, it will either mean that another button will be displayed on the transactions page or that this functionality will be moved to a different page. In the first case, the pattern of the circular button will make less sense, as it is normally used as one button only. In the second case, it will probably result in the "Your Bitcoin Address" section being transformed into a generic "payment request" section. No matter what choice is made, it will probably result in a revision of this "SEND" button.
 
-Using it as it is now, the "SEND" button gives me a choice of both pasting or scaning a payment request. The pasting only works if the code was previously copied by the device, it doesn't show an input option and it completely blocks the user from the possibility of writing the code by hand. Although the manual copying should be very discouraged, its the prohibition takes away a flexibility the might be needed in specific situations.
+Using it as it is now, the "SEND" button gives the choice of both pasting or scanning a payment request. The pasting only works if the code was previously copied by the device, it doesn't show an input field and it completely blocks the user from the possibility of writing the code by hand. Even though the manual copying should be very discouraged, its the prohibition takes away a flexibility that might be needed in specific situations.
 
 ![](/assets/eclair_19.png)
 
-As the payment request is scaned, a message tells me that I need to manually open a Lightning channel before being able to pay and it also tells me where to perform such an operation. The break of the user experience due to the manual channel opening requirement was there, but it was much more smooth than the stress caused by a system error with ambiguos messages in red background.
+As the payment request is scanned, a message tells the user that he needs to manually open a Lightning channel before being able to pay and it also indicates where to perform such an operation. The break of the user experience due to the manual channel opening requirement was there, but it was much more smooth than the stress caused by the display of a system error with ambiguous messages in a red background.
 
 ![](/assets/eclair_17.png)
 
-In the Lightning channels page, we see a small instruction taking advantage of the empty space, as it was suggested previously for the Zap wallet. Also, the "NEW" button already calls more attention to itself due to its bright color, as suggested above for the "SEND" button, even though it could be slightly larger as well.
+In the Lightning channels page, we see a small instruction taking advantage of the empty space, as it was suggested previously for the Zap wallet. Also, the "NEW" button already calls more attention to itself due to its bright green color, as suggested above for the "SEND" button, even though it could be slightly larger as well.
 
 ![](/assets/eclair_0.png)
 
-The three options provided for opening a new channel are pasting or scaning a node URI and autoconnecting. Again, there is a constraint that doesn't allow a manual input of the URI, neither there is a search option for peers. The autoconnect option is, from what can be understood in the blog post, a pre-implementation of an auto-management of channels. Only it's not really clear if it will take place automatically or if the user will need to deliberately ask for it in this option. For now, it's a hacked self-bootstrapping for the wallet that might as well serve its function, even with the underlying structure still under construction, and that's the option we will choose now.
+The three options provided for opening a new channel are pasting or scanning a node URI and auto-connecting. Again, there is a constraint that doesn't allow a manual input of the URI, neither there is a search option for peers. 
+
+The auto-connect option is, from what can be understood in the blog post, a kind of pre-implementation of an auto-management of channels. Only it's not really clear if the auto-management will take place automatically or if the user will need to deliberately ask for it in this option. For now, it's a hacked self-bootstrapping for the wallet that might as well serve its function, even with the underlying structure still under construction. That's the option we will choose now.
 
 ![](/assets/eclair_2.png)
 
-It opens a window with a pre-chosen node and it only requires the user to fill in the amount to be commited to the channel. The technical information displayed \(node id, node ip and port\) are not very user-friendly but are necessary for a manual channel opening. It will only be avoided when users don't need to go to that option very often.
+It opens a window with a hard-coded choice of the node and it only requires the user to fill in the amount to be committed to the channel. The technical information displayed \(node id, node IP, and port\) is not very user-friendly but it's necessary for a manual channel opening. This degradation of the experience will only be avoided when users don't need to go to that option very often.
 
 ![](/assets/eclair_20.png)
 
-If the user decides to go for the payment now that he's asked to open a channel, but before his transaction was confirmed, he will receive a different message saying that his channels are not ready for payment. That's an important detail as, if the message was the same from the last time, it would seem like a bug/delay or the user simply wouldn't understand why he couldn't send the payment, both possibilites having the consequence of arousing more confusion.
+If the user decides to go for the payment now that he's asked to open a channel, but before his transaction was confirmed, he will receive a different message saying that his channels are not ready for payment. That's an important detail as, if the message was the same from the last time, it would seem like a bug/delay or the user simply wouldn't understand why he couldn't send the payment, both possibilities having the consequence of arousing more confusion.
 
 ![](/assets/eclair_21.png)
 
-With some channels are already open, we can observe that the general layout and color coding of the displayed channels is very good, with the possibility of seeing a very complete channel information page if the channel row is clicked upon. Only the "With..." label is confusing, but it might only be a issue from the development phase.
+With some channels already open, we can observe that the general layout and color coding of the displayed channels is very good. There's also the possibility of seeing a complete channel information page if the channel row is clicked upon. Just the "With..." label is confusing and unclear about the message to be conveyed, but it might only be an issue from the development phase.
 
 After having at least one channel confirmed and in the "normal" state, the payment can finally be carried out.
 
 ![](/assets/eclair_8.png)
 
-The window that automatically opens when the payment code is scaned shows: the amount to be paid, the conversion of the amount to fiat currency in a subtle display, a "to" field, a description \(if one has been giver\) and the fact that it's a lightning transaction. After confirming the information is correct, the user can hit "PAY".
+The window that automatically opens when the payment code is scanned shows the amount to be paid, the conversion of the amount to fiat currency in a subtle display, a "To" field, a description \(if one has been given by the requester\) and the identification that it's a lightning transaction. After confirming that the information is correct, the user can hit "PAY".
 
 ![](/assets/eclair_9.png)
 
-Since it's a lightning transaction, it appears almost instantly as "paid" in the transactions list. The transaction data displayed in the transactions section is very complete for such a small available space, and it does that without getting too cluttered.
+Since it's a lightning transaction, it will appear almost instantly as "paid" in the transactions list. The transaction data displayed in the transactions section is very rich for such a small available space, and it does that without getting too cluttered.
 
-There's a clear indication of whether the transaction was a lightning or blockchain one through the use of badges. A small suggestion here would be to change the Bitcoin badge for a "chain" badge \(similar to Zap\), since they are all Bitcoin transaction from the user's point of view.
+There's a clear indication through the use of badges of whether the transaction was a lightning or blockchain type. A small suggestion here would be to change the Bitcoin badge for a "chain" badge \(similar to Zap\) since they are all Bitcoin transactions from the user's point of view.
 
-The complete timestamp of the transaction is shown, as well as the number of confirmations for blockchain transactions. This is particularly important as Eclair's objective is to be a global wallet, so keeping track easily of confirmations will be a daily need.
+The complete timestamp of the transaction is shown, as well as the number of confirmations for blockchain transactions. This is particularly important as Eclair's objective is to be a global wallet, so easily keeping track of confirmations will be a daily need.
 
-The description field is only available for Lightning transactions. It would be a good future improvement to implement the possibility of putting labels in blockchain transactions, as well, to facilitate accounting. This label would replace the Transaction Id shown at the moment, that could be available only on the transaction details page that can be viewed by clicking the transaction row.
+The description field is only available for Lightning transactions. It would be a good future improvement to implement the possibility of putting labels in blockchain transactions, as well, to facilitate accounting. This label would replace the Transaction Id shown at the moment, and this Id could be available only on the transaction details page that can be viewed by clicking on the transaction row.
 
-As for the right part of the page, it shows the amount transacted with a color signifier of a transaction that was sent or received, besides the negative signal before amounts that were paid by the user. It also accompanies the fee paid in each transaction in a smaller and lighter print that doesn't compete so much with the main information which is the amount.
+As for the right part of the page, it shows the amount transacted with a color signifier of a transaction that was sent or received. Besides, it puts a negative signal before amounts that were paid by the user. It also appends the fee paid for each transaction in a smaller and lighter print that doesn't compete so much with the main information, which is the amount.
 
 ![](/assets/eclair_11.png)
 
-Although is wasn't mentioned until now, the wallet clearly shows the total amount of funds in a high visual priority in the screen, with the amount available for blockchain transactions and the amount commited to lightning channels right below in a lower visual priority. The only element missing from the guidelines suggested in Objective 2 is the conversion to a fiat currency, at least for the total value.
+Although it wasn't mentioned until now, the wallet clearly shows the total amount of funds in a high visual priority in the screen, with the amount available for blockchain transactions and the amount committed to lightning channels right below in a lower visual priority. The only element missing from the guidelines suggested in Objective 2 is the conversion to a fiat currency that should be shown at least for the total value.
 
-As is was said before, Eclair doesn't currently support the request of Lightning payments, making the request task impossible at this time. As a consequence, we will skip to some extra comments about the interface.
+As is was said before, Eclair doesn't currently support the request of Lightning payments, making the completion of the "request" task impossible at this time. As a consequence, we will skip to some extra comments about the interface.
 
 ![](/assets/eclair_22.png)
 
-Eclair counts with a more modest view of the current state of the network, but it's more than enough for a regular user. It's more aligned with the suggestion this study made earlier about the Zap interface because it keeps this network section in a hidden menu, so it doesn't compete for attention with more important elements. Also, it presents information about both the blockchain and the Lightning network, which makes sense with the intention of being an "all-purpose" wallet.
+Eclair counts with a more modest view of the current state of the network, but it's more than enough for a regular user. It's further aligned with the suggestion this study made earlier when analyzing the Zap interface because it keeps this network section in a hidden menu, so it doesn't compete for attention with more important elements. Also, it presents information about both the blockchain and the Lightning network, which makes sense with the intention of being an "all-purpose" wallet.
 
-The approach that the Eclair's team seem to be taking is to make things work with few features to later increment them, so it looks like a very promising development. For the future phases, this study will leave the suggestion of icreasing user freedom and control over some actions, for instance: allowing typing in input fields, adding custom label options and allowing to create payments with a fixed amount \(both for blockchain and Lightning Network\).
+The approach that the Eclair's team seem to be taking is to make things work with few features to later increment them, so it looks like a very promising development. For the future phases, this study will leave the suggestion of increasing user freedom and control over some actions, for instance: allowing typing in input fields, adding custom label options and allowing to create payments with a pre-defined requested amount \(both for the blockchain and the Lightning Network\).
 
