@@ -221,7 +221,7 @@ In the Lightning channels page, we see a small instruction taking advantage of t
 
 ![](/assets/eclair_0.png)
 
-The three options provided for opening a new channel are pasting or scanning a node URI and auto-connecting. Again, there is a constraint that doesn't allow a manual input of the URI, neither there is a search option for peers. 
+The three options provided for opening a new channel are pasting or scanning a node URI and auto-connecting. Again, there is a constraint that doesn't allow a manual input of the URI, neither there is a search option for peers.
 
 The auto-connect option is, from what can be understood in the blog post, a kind of pre-implementation of an auto-management of channels. Only it's not really clear if the auto-management will take place automatically or if the user will need to deliberately ask for it in this option. For now, it's a hacked self-bootstrapping for the wallet that might as well serve its function, even with the underlying structure still under construction. That's the option we will choose now.
 
