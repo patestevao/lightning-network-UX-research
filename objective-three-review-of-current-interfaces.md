@@ -1,6 +1,3 @@
-
----
-
 # Objective three: review of current interfaces
 
 The final section of this research will go through the current implementations of Lightning Network wallets with graphic user interfaces to point out the main good and bad design decisions that are being made. We have to consider, of course, that all the candidate clients for analysis are in a very early stage of development and are not actually functional yet. Due to that, there will be an effort to differentiate between what seems to be a design choice and what is a temporary implementation bug, since only the former is relevant here.
@@ -27,7 +24,7 @@ Another general aspect of the current wallets is that, probably due to the early
 
 The first screen shows the amount available in a Bitcoin unit and in US dollar, as well as the three main sections of the wallet: send, receive and network. The wallet doesn't allow a blockchain funding operation, instead, it starts itself with the amount of 0.00016000 tBTC. This is probably due to the merely demonstrative purpose I mentioned before.
 
-![](/assets/HTLC_0.png)
+![](/assets/HTLC_1.png)
 
 Since there's no setup process available for this wallet, the first operation will be an emblematic coffee purchase, using the [Startblocks demo website](https://starblocks.acinq.co/#/). As expected when proposing the wallet's sketches, the merchant provides both an easy way to copy or to scan the payment code. In the case of HTLC.me, only pasting or writing is possible, a scanning option would need to be implemented.
 
@@ -39,19 +36,19 @@ As soon as the payment code is pasted, the available information about the purch
 
 After sending the payment, a confirmation screen with the transaction details is shown, which is also a proper feedback system. This concludes the first task of sending a payment.
 
-![](/assets/HTLC_4.png)
+![](/assets/HTLC_3.png)
 
 The second step is to request a payment, which is made in the Receive tab by entering the desired amount you wish to receive. Here, an interlock is applied by only making the "Request Payment" button show up after an amount is written down. This is a good application of an anti-affordance \(a lack of functionality that communicates the proper behavior\) that tells the user that a payment request can only be generated if an amount is provided. On the other hand, it might create a moment of confusion in case the user tries to understand how to generate the payment before writing anything in the amount field because there will be no available button. A better approach could be to display the button in an "off-mode", i.e., with a style that indicates that it's disabled \(such as a light/greyish color and no link behavior on hover\).
 
-\(HTLC\_12\)
+![](/assets/HTLC_12.png)
 
 After generating the payment, the code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option \(the button with a bell icon\) is also provided for enabling browser notification when the payment is received. The button with a "reload" icon remains a mystery as its function couldn't be understood. If there was a title tag on the image, it could have given a better explanation of its purpose but, in this current setup, it's a button with no apparent effect when pressed.
 
-\(HTLC\_13\)
+![](/assets/HTLC_13.png)
 
-Here's the feedback when the payment is received:
+Here's the feedback when the payment is received \(with enabled browser notification\):
 
-\(HTLC\_10\) \(HTLC\_11\)
+![](/assets/HTLC_11.png)
 
 Note that no manual channel opening was required until now. That's because HTLC.me already starts itself with a list of connected peers, as it can be seen in the Network section.
 
