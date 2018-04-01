@@ -60,35 +60,35 @@ The Network directory is also where the user's own peer address is shown, which,
 
 ### Zap
 
-Zap is a desktop wallet developed by Jack Mallers and other contributors. Since it is a more complete interface, it naturally will have more elements to be analyzed and, possibly, criticized. It has, at its core, the intention of being user-friendly and the general aesthetic of the wallet is very pleasant. This last aspect is indeed important because users tend to perceive more pleasant interfaces as easier to use, so it's also part of a better usability.
+[Zap](http://zap.jackmallers.com/) is a desktop wallet developed by [Jack Mallers](https://twitter.com/JackMallers) and other contributors. Since it is an interface with more features, it naturally will have more elements to be analyzed and, possibly, criticized. It has, at its core, the intention of being user-friendly and the general aesthetic of the wallet is very pleasant. This last aspect is indeed important because users tend to perceive more pleasant interfaces as easier to use, so it's also part of a better usability.
 
 The software used for this test was the v0.1.0-beta release for MacOs and it was run on a macOS High Sierra v10.13.3.
 
-Beggining with the first opening of the wallet, it presents a dark screen with an animated loading icon that counts a percentage of loading and a carroussel structure in the middle with a written content.
+Beginning with the first opening of the wallet, it presents a dark screen with an animated loading icon that counts a percentage of loading and a carousel structure in the middle with various slides of written content.
 
 ![](/assets/zap_12.png)
 
-At the time of writing, the first experience with Zap already started with confusion for the user, because the loading process takes a long time and no explanation was given about what was loading. It looks like the user is stuck at this first page. This issue had already been pointed out in a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/243) and it appears that it is now resolved with the addition of a "Syncing to the blockchain..." message.
+At the time of writing, this first experience with Zap already started with some degree of confusion for the user, because the loading process takes a long time and no explanation was given about what was being loaded. It looks like the user is stuck on the first page. This issue had already been pointed out in a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/243) and it appears that it is going to be resolved with the addition of a "Syncing to the blockchain..." message.
 
-Still on this same page, the carroussel can only be navigated by clicking the circles in the center of the page. Those circles convey the message of how many carroussel items there are and which one of them is activated. They do not, however, give the impression of being navigable links. The carroussel navegability should be improved by allowing direct control through keyboard arrows and adding some signifier on screen, such as left and right arrows, to better indicate where one should click to change items.
+Still on this same page, the carousel can only be navigated by clicking the circles in the center of the page. Those circles convey the message of how many slides there are and which one of them is activated. They do not, however, give the impression of being navigable links. Therefore, the carousel navigability should be improved by allowing direct control through keyboard arrows and by adding some signifier on the screen, such as left and right arrows, to better indicate where one should click to change items.
 
-Also, although the explanation of Lightning Network is timely and clear, the other elements that are explained end up being so superficially described that not only fail to convey a useful knowledge but might even make users more confused. This moment the user has to wait for the syncing could be seized to give a more practical explanation about the wallet and its usage, accompanied by "learn more" links that will lead the interested person into a page with a proper explanation for these concepts.
+Also, although the explanation about the Lightning Network is timely and clear, the other elements that are explained ended up being so superficially described that they not only fail to convey a useful knowledge but might even make users more confused. This moment the user has to wait for the syncing could be seized to give a more practical explanation about the wallet and its usage, accompanied by "learn more" links that will lead the interested person into a page with a proper explanation for these technical concepts.
 
 ![](/assets/zap_1.png)
 
-When in the wallet, the beautiful interface will show an empty activity page. A mere suggestion here would be to include small explanations about each section while they are empty, so the user undestands what will go where at the same time that gets more information about how the Lightning Network works.
+When in the wallet, the first screen to be shown is an empty activity page. A mere suggestion here would be to include small explanations about each section while they are empty, so the user understands what will go where at the same time that gets more information about how the Lightning Network works.
 
-Since the wallet setup flow is not yet implemented, we're going to straight to the second flow from the Objective 2 section: making a payment. As this is the first time the wallet is being used, we need to fund the wallet with a blockchain transaction. The two candidates for this action are the REQUEST button and the Adress button. This trial and error approach to find the correct path is an indicator of inapropriate design choices, as the user shouldn't have to be in doubt of where to find a way to put money in the wallet. Maybe the labels or groupings should be revised.
+Since the wallet setup flow is not yet implemented, we're going to straight to the second flow from Objective 2: making a payment. As this is the first time the wallet is being used, we need to fund it with a blockchain transaction. The two candidate elements to perceive this action are the REQUEST button and the Adress button. This trial and error approach to find the correct path is an indicator of inappropriate design choices, as the user shouldn't have to be in doubt of where to find a way to put money in the wallet. Maybe the labels or groupings should be revised.
 
 We soon find out that the REQUEST section only creates lightning requests and that the Address section is where you can find a blockchain address for the wallet. Now let's take a look at where it takes us:
 
 ![](/assets/zap_22.png)
 
-First, there is an inconsistent naming in which the blockchain address of the wallet is called "wallet address" in the QR code section and "deposit address" below. Also, this display is a bit confusing as it is, in practice, divided in "QR code section" and "written section". A more semantic division would be "deposit address section" and "node pub key section", each with a button to show the desired QR.
+First, there is an inconsistent naming in which the blockchain address of the wallet is called "wallet address" in the QR code section and "deposit address" below. Also, this display is a bit confusing as it is, in practice, divided in "QR code section" and "written address section". A more semantic division would be "deposit address section" and "node pub key section", each with a button to show the desired QR code.
 
 Anyway, the required address for a blockchain transaction is there and we'll use it to fund the wallet. Once that's done, we can go on with the Lightning payment task.
 
-The PAY button is relatively easy to find, but is does have a usability problem that's worth mentioning.
+The PAY button is relatively easy to find but it does have a usability problem that's worth mentioning.
 
 ![](/assets/zap_0.png)
 
@@ -104,55 +104,56 @@ Again, we'll use the Starblocks page to make our purchase and get a payment code
 
 ![](/assets/zap_14.png)
 
-It automatically completes with the amount of the payment and gives the feedback about the code being a valid Lightning Network payment. Although it is interesting that the page is very focused with the minimum of necessary elements, there are some extra information that could help the user, such as the previously suggested conversion of the amount to fiat currency \(in a smaller font\) and the possibility of adding a label to the transaction, in order to make it easier to find in the future when its listed with many others. After all, a great use case of the Lightning is exactly to make various small transactions, so it's likely that the list of past transactions will be very extense. Let's hit pay.
+It automatically completes with the amount of the payment and gives the feedback about the code being a valid Lightning Network payment. Although it is interesting that the page is very focused on the minimum of necessary elements, there are some extra information that could help the user, such as the previously suggested conversion of the amount to fiat currency \(in a smaller font\) and the possibility of adding a label to the transaction, in order to make it easier to find in the future when its listed with many others. After all, a great use case of the Lightning Network is exactly to make various small transactions, so it's likely that the list of past transactions will be very extensive.
+
+Let's hit pay.
 
 ![](/assets/zap_15.png)
 
-The transaction couldn't go through because there isn't a path to the peer we tried to pay. This means that Zap is one of the wallets which is being initially developed requiring users to open they own channels by hand every time they need. We aren't going to deeply analyze this process because this study's reccomentation is that this situation is reverted before the software is actually released for users on the mainnet. But we'll go quickly through the steps, since it will be necessary to complete the task of sending a payment.
+The transaction couldn't go through because there isn't a path to the peer we tried to pay. This means that Zap is one of the wallets which is being initially developed requiring users to open they own channels by hand every time they need. We aren't going to deeply analyze this process because this study's recommendation is that this situation is reverted before the software is actually released for users on the mainnet. But we'll go quickly through the steps since they will be necessary to complete the task of sending a payment.
 
 ![](/assets/zap_18.png)
 
-That's the page for adding a new contact, i.e., opening a channel. As they might be useful when designing any other page of the wallet, some of the main perceived issues will be listed here:
+That's the page for adding a new contact, i.e., opening a channel. Some of the main perceived issues are:
 
-* The contrast in the grey section is very low and one of the main elements of the page \(the submit button\) pratically disappears because of that and the small font size.
-
-* The label "pubkey@host" could be more helpful if it displayed an example of the numeric format that is expected, such as "022f0edb0d6a8e19320e949a6f24fd4442c390ba1f38f8349b92ee0ee6cbdece08@35.229.31.135:9735". The visual cue of what the user is looking for is very important if he doesn't know exactly what he is looking for \(as he might not know what is a pubkey or a host\).
-
-* The amount that is to be commited to a channel appears as a small detail on the bottom of the page \(it's shown after the "submit" button\) and it doesn't look very editable. It would be easy for someone to "add a contact" without even noticing that he had a choice there. This is mentioned in a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/272).
-
-* Even for future wallets where the manual channel opening is less frequent, it would be useful to be able to add an alias or label to a new contact in order to make it more easily searchable and recognizible. This was also identified by other and put in a [Github issue.](https://github.com/LN-Zap/zap-desktop/issues/227)
+* The contrast in the grey section is very low and one of the main elements of the page, the submit button, practically disappears because of that combined with the small font size.
+* The label "pubkey@host" could be more helpful if it displayed an example of the numeric format that is expected, such as "022f0edb0d6a8e19320e949a6f24fd4442c390ba1f38f8349b92ee0ee6cbdece08@35.229.31.135:9735". The visual cue of what the user is supposed to input is very important if he doesn't know exactly what he is looking for \(as he might not know what pubkey and host are\).
+* The amount that is to be committed to a channel appears as a small detail on the bottom of the page \(it's shown after the "submit" button\) and it doesn't look very editable. It would be easy for someone to "add a contact" without even noticing that he had a choice there. This is mentioned in a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/272).
+* Even for future wallets where the manual channel opening is less frequent, it would be useful to be able to add an alias or label to a new contact in order to make it more easily searchable and recognizable. This was also identified by someone else and put in a [Github issue.](https://github.com/LN-Zap/zap-desktop/issues/227)
 
 We finally have channels open:
 
 ![](/assets/zap_3.png)
 
-This page of the interface has some very good elements, such as the searching option, a filter for contacts, a refresh option \(which could have a refresh icon next to it to call more attention\), and a clear state for each contact that is both written and color coded. As for the possible improvements: the already mentioned addition of an alias to each contact, the bad contrast in the "Add +" button \(same as in the PAY and REQUEST\). The division of the amount in the channel between "Can Pay" and "Can Receive" is an extra load on the user if he has to keep track of this for every transaction. But in the future case that this page is only eventually used for deliberate manual operations, it can add valuable information.
+This page of the interface has some very good elements, such as the searching option, a filter for contacts, a refresh option \(which could have a refresh icon next to it to call more attention\), and a clear display of the state for each contact that is both written and color coded. As for the possible improvements: the already mentioned addition of an alias to each contact and the bad contrast in the "Add +" button \(same as in the PAY and REQUEST buttons\). 
+
+The division of the amount in the channel between "Can Pay" and "Can Receive" is an extra load on the user if he has to keep track of this for every transaction. But in the future case that this page is only eventually used for deliberate manual operations, it can add valuable information.
 
 Now, if we repeat the steps of the payment flow, we will have a successful operation.
 
-Our second task is to request a payment and, for that, we'll go into the REQUEST page.
+Our second task is to request a payment and, for that, we'll go to the REQUEST page.
 
 ![](/assets/zap_17.png)
 
-Once you complete the request with the desired amount and label, you should receive a payment request such as this one:
+Once you fill in the information with the desired amount and label, you should receive a payment request such as this one:
 
 ![](/assets/zap_8.png)
 
-It gives you a visible payment code, an option to copy and to scan, as well as displays the amount and the label you wrote in the previous step. Besides those basic elements, it also says the date the request was created and its current status \(if it was paid or not\). It really got all the elements right with the correct visual priority.
+It gives you a visible payment code, an option to copy and to scan, as well as it displays the amount and the label you wrote in the previous step. Besides those basic elements, it also says the date the request was created and its current status \(if it was paid or not\). It really got all the elements right with the correct visual priority.
 
-With that information, you can share the request with the person who is supposed to pay it and wait for a confirmation. Requesting a payment was also successful.
+With that information, you can share the request with the person who is supposed to pay it and wait for a confirmation. Therefore, requesting a payment was also successful.
 
 After a few transactions, here's what the wallet page will look like:
 
 ![](/assets/zap_10.png)
 
-It perfectly represents the segmentation between Lightning and blockchain transactions, although the "Request BTC" and "Sent BTC" labels get quite repetitive. That space could be occupied by more informative label that will help the user identify them and the knowledge of what was requested or sent is conveyed through the positive or negative numbers in the right. It would be even clearer if the numbers were properly color coded as well and not only the differentiation for received transactions on the blockchain.
+It perfectly represents the segmentation between Lightning and blockchain transactions, although the "Request BTC" and "Sent BTC" labels get quite repetitive. That space could be occupied by a more informative label that will help the user identify transactions. The knowledge of how much was requested or sent is conveyed through the positive or negative numbers in the right. It would be even clearer if the numbers were properly color coded as well. At the moment, the only differentiation by color is that for the received blockchain transactions.
 
 ![](/assets/zap_20.png)
 
-The doubt about that is the smaller number under the transaction amount is quickly answered by hovering the number and revealing that it is the transaction fee. The date of the transaction is informed, as well as if it's still pending \(represented by the clock icon that reveals an explanation when hovered on\).
+There could be a doubt, at first, about the small number displayed under the transaction amount but that is quickly answered by hovering on the number, which reveals that it is the transaction fee. The date of the transaction is also informed, as well as if it's still pending \(represented by the clock icon that reveals an explanation when hovered on\).
 
-The biggest experienced issue is that unconfirmed blockchain transactions are not being shown, they only appear after confirmation. This is clearly a lack of proper feedback for the user that needs to know if the transaction is on its way but, as stated in the [Github issue](https://github.com/LN-Zap/zap-desktop/issues/139) about the subject, it's probably a temporary bug.
+The biggest experienced issue here is that unconfirmed blockchain transactions are not being shown, they only appear after the first confirmation. This is clearly a lack of proper feedback for the user that needs to know if the transaction is on its way but, as stated in the [Github issue](https://github.com/LN-Zap/zap-desktop/issues/139) about the subject, it's probably a temporary bug.
 
 A suggestion for the activity filter would be to create a segmentation in three main categories \(All, Lightning and Blockchain\) and use tabs instead of a drop-down, which has poorer discoverability. And, when in the Lightning tab, a submenu could appear with more refined options, such as sent, received, pending, invoices and complete. A different suggestion on the same theme was purposed on a [Github issue](https://github.com/LN-Zap/zap-desktop/issues/250), as well.
 
@@ -160,23 +161,25 @@ With all the tasks completed, some extra comments about the interface are due:
 
 ![](/assets/zap_13.png)
 
-Some messages displayed during the use of the wallet have a funny/playful tone that might not be appropriate to the situation. A wallet is a financial application, the users need clear messages and shouldn't be put in a playful mood because the operations they are performing might result in financial loss.
+Some messages displayed during the use of the wallet have a funny/playful tone that might not be appropriate to the situation. A wallet is a financial application. The users need clear messages and shouldn't be put in a playful mood because the operations they are performing might result in financial loss.
 
-There is an issue that will be less frequent with an automated channel management, but an issue nonetheless. If you open multiple channels with the same peer, you have no warning or indication of that and the channels appear as completely different. That breaks the conceptual model of "contacts" that is passed on Zap \(you can't have two equal contacts that appear as different ones\). That is pointed out here on [Github](https://github.com/LN-Zap/zap-desktop/issues/252). And the suggestion presented by this research is to either drop the "contact" analogy and call it a "channel" or to recognize repeated peers and group its channels under one name/pubkey.
+There is an issue that will be less frequent with an automated channel management, but it's an issue nonetheless. If you open multiple channels with the same peer, you have no warning or indication of that, and the channels appear as completely different. That breaks the conceptual model of "contacts" that is passed on Zap, as you can't have two equal contacts that appear as different entities. That is pointed out here on [Github](https://github.com/LN-Zap/zap-desktop/issues/252). The suggestion presented by this research is to either drop the "contact" analogy and call it a "channel" or to recognize repeated peers and group its channels under one name/pubkey.
 
 ![](/assets/zap_17.png)
 
-Although not clearly visible at first, a repeated mistake during the wallet's operation has put to light a possible needed improvement. Both on the PAY and REQUEST sections, the label and payment code are requested as normal input fields, clearly recognizible but the user. Even though the amount is also an input field, it's shown in a completely different style \(very large and colored\), which passes, at first, as a decorative object. It looks very good aesthetically, but it might be more recognizible if it was in a more input-like style, similar to the other required element.
+Although not clearly visible at first, a repeated mistake during the wallet's operation has put to light a possible need for improvement. Both on the PAY and REQUEST sections, the label and payment code are requested as normal input fields, clearly recognizable for the user. Even though the amount is also an input field, it's shown in a completely different style \(very large and colored\), which can pass, at first, as a decorative object. It looks very good aesthetically, but it might be more recognizable if it's displayed in a more input-like style, similar to the other required elements.
 
 ![](/assets/zap_11.png)
 
-The Network section of the wallet is an interesting visualization model for the whole Lightning Network and it seems to be going in the right direction in terms of understanding the map and seeing peer information. It couldn't be explored very well during this study due to still unresolved development problems, but one observation can be made: is it really something to be in the same hierarchical importance as the "wallet" section? Specially when the auto-management of channels is implemented, this section shouldn't be so prominent as it has less practical use on daily user activities.
+The Network section of the wallet is an interesting visualization model for the whole Lightning Network and it seems to be going in the right direction in terms of making the map easy to understand and to visualize peer information. It couldn't be explored very well during this study due to still unresolved development problems, but one observation can already be made: is it really something to be in the same hierarchical importance as the "wallet" section? Especially when the auto-management of channels is implemented, this section shouldn't be so prominent as it has less practical use on daily user activities.
 
-To finish the analysis over the Zap wallet, a few comments about the analogy system adopted by Zap that refers to channels as contacts. It is, indeed, a way to make users feel more familiar with the operation of the wallet as they use "add contact" features everyday in their lives. As for a "open channel" instruction, it requires immediate learning and might create resistance. But, sometimes, the lack of familiarity is necessary for the user to undestand that it is something new that he should be paying attention to. For example, the issue with the amount that is commited per channel being too subtle in the interface is exacerbated by the lack of need for it in the contact conceptual model. Why would someone need to choose an amount to add a contact to a contact list? The issue with the multiple channels opened with the same peer also brings confusion, but it could be solved by the appropriate grouping of channels.
+To finish the analysis over the Zap wallet, a few comments will be made about the analogy system adopted by Zap that refers to channels as contacts. It is, indeed, a way to make users feel more familiar with the operation of the wallet as they use "add contact" features every day in their lives. As for an "open channel" instruction, it requires immediate learning and might create resistance. But, sometimes, the lack of familiarity is necessary for the user to understand that it is something new that he should be paying attention to. For example, the issue with the amount that is committed per channel being too subtle in the interface is exacerbated by the lack of need for it in the contact conceptual model. Why would someone need to choose an amount to add a contact to a contact list? The issue with the multiple channels opened with the same peer also brings confusion, but it could be solved by the appropriate grouping of channels.
 
-In the proposed interface in Objective 2, the terms "add peer" were used, along with an explanation that you are opening a channel directly with a peer. The idea was to have a more understandable expression than "open channel", but with a lack of familiarity that will make the user pay more attention. However, that's really an issue that should be evaluated further. As it might be that this particular choice of words will end up with the worst effect of both sides \(not being technically correct and not being familiar\).
+In the proposed interface in Objective 2, the term "add peer" was used, along with an explanation that you are opening a channel directly with a peer. The idea was to have a more understandable expression than "open channel", but with enough lack of familiarity to make the user pay more attention. However, that's really an issue that should be evaluated further and no right answer is being proposed here. As it might be that this particular choice of words \("
 
-The moment of suggesting options and trying them out is really now, so Zap's choice is considerably good. And as there's no such thing as a perfect analogy, the main focus for future interfaces should be on maintaining consistency and standards among different ones. Other faulty analogies are used in Bitcoin systems everyday and is appears that users got used to them so far. But they are the same terms for every app \(address, coins, balance, etc.\). Requiring learning of new systems from users is far less problematic that it may sound if it only has to be done once.
+add peer"\) will end up with the worst effect of both sides, not being technically accurate and not being familiar.
+
+The moment of suggesting options and trying them out is really now, so Zap's choice is considerably good, at least for the reason of testing. And, as there's no such thing as a perfect analogy, the main focus for future interfaces should be to maintain consistency and standards among different implementations. Other faulty analogies are used in Bitcoin systems everyday and is appears that users got used to them so far. But that can only be true because they are the same terms for every app \(address, coins, balance, etc.\). Requiring learning of new systems from users is far less problematic than it may sound if it only has to be learned once.
 
 ### Eclair
 
