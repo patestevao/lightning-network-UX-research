@@ -85,7 +85,7 @@ Comments about the interface:
 * The multiple options of scanning a QR code, writing, or simply copy/pasting the address that should receive the money are already widely adopted in Bitcoin applications, but it's important to mention them as best practices, anyway.
 * When the user inputs the address or lightning payment code, the wallet should promptly give the feedback of what type of address it is \(Lightning or blockchain\).
 * The idea of a self-bootstrapped wallet is that it will connect itself to a number of relevant peers in a way that, in most cases, there will already be a route for any payment the user might want to make. Nevertheless, it might come a time, especially in these early stages of the network, that a path can't be found and the wallet will need to open a new channel before doing the Lightning transaction. In that case, the best option is to warn the user that the transaction will take longer and require an extra fee because it will need to make a blockchain transaction to open a channel.
-* As it was already stated, the process of opening new channels should be automated by the wallet's backend, removing any burden from the user having to perform this operation manually. Nevertheless, the user should be able to add peers manually if he specifically desires so. The suggested structure for how this feature should be implemented will be discussed further.
+* As it was already stated, the process of opening new channels should be automated by the wallet's backend, removing any burden from the user having to perform this operation manually. Nevertheless, the user should be able to open channels manually if he specifically desires so. The suggested structure for how this feature should be implemented will be discussed further.
 * The fee estimation for the route chosen by the wallet's backend should be displayed with a warning if the fee seems too high. The definition of a high fee could be a market-established one that is used by default, with the possibility for the user to set his own threshold in the settings section.
 * The amount can be written in the Bitcoin field or in the fiat currency field, with one autocompleting the other using the current Bitcoin price. Both the fiat currency and the unit of Bitcoin should be available for the user's personal configuration in the settings section.
 
@@ -168,8 +168,24 @@ Channels screen, i.e. where open channels are listed.
 In the Lightning channels section, the most important elements to be considered:
 
 * List of channels with information about the peer, amount commited and the current status of the channel.
-* Possibility of manually opening a channel with a specific peer, even though it's an advanced feature.
+* Possibility of manually opening a channel with a specific peer, even though it's an advanced feature and should be treated as so \(for example: give the user a warning about the operation or only making this option available if the user enables it on the settings section\).
+* Make available the user's network address with a small explanation of why the user might need it \(represented here by the interrogation mark that can be hovered on or clicked\).
 * Filter for channels based on their status would be a nice to have.
+
+#### Open Channel page
+
+![](/assets/add_peer.png)
+
+Screen for opening a new channel manually.
+
+At last, we get to our final screen, which is where the user is able to manually open a new channel. Due to the risks associated and the particular difficulty in understanding the information on this page, this is considered an advanced feature. However, it's important that it's included in a Lightning Network wallet, even if, as suggested above, it's a page that needs to be deliberately enabled in the settings page.
+
+The main elements that should appear here are the following:
+
+* An input field for the peer address with a numeric representation of what is a peer address, like a placeholder. The user should also be able to scan the peer address that can be provided by third parties as a QR code.
+* A field for searching the peer by name. It's not as reliable as the previous but it can make the identification of the peer a lot easier if the peer in question has an alias set for himself.
+* The amount that the user wants to commit to the channel with the proper conversion to fiat currency.
+* A conventional choice of the transaction priority, since it's a blockchain transaction, with the expected fee being updated depending on the priority choice. Note that no drop-down option was used here because the number of options is limited to three, so there's no reason to degrade the discoverability of the values.
 
 ## Phase 2 wallets
 
