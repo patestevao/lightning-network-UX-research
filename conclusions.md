@@ -10,7 +10,9 @@ Nevertheless, the evolution is going on full-steam and the situation might chang
 
 ###### Visualize how a user interface should be built in order to accommodate the new functions of the Lightning Network and provide a good usability and experience.
 
-As it would be with any other technology, be it groundbreaking or  the 
+The interface that was described
+
+As it would be with any other technology, be it groundbreaking or something people are accostumed to, the design principles which should be used as guidance are the same. Having in mind the ten heuristics used in this analysis, for example, can help developers think better about a product from the user perspectice. Obeying the [Gestalt principles](http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm) for a clear and easily comprehensible layout are another important approach.
 
 ###### Review usability aspects and design decisions of the current solutions of graphic interfaces, taking into account the early stage of development they are in.
 

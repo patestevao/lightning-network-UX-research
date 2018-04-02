@@ -257,7 +257,7 @@ As for the right part of the page, it shows the amount transacted with a color s
 
 Although it wasn't mentioned until now, the wallet clearly shows the total amount of funds in a high visual priority in the screen, with the amount available for blockchain transactions and the amount committed to lightning channels right below in a lower visual priority. The only element missing from the guidelines suggested in Objective 2 is the conversion to a fiat currency that should be shown at least for the total value.
 
-As is was said before, Eclair doesn't currently support the request of Lightning payments, making the completion of the "request" task impossible at this time. As a consequence, we will skip to some extra comments about the interface.
+As it was said before, Eclair doesn't currently support the request of Lightning payments, making the completion of the "request" task impossible at this time. As a consequence, we will skip to some extra comments about the interface.
 
 ![](/assets/eclair_22.png)
 
