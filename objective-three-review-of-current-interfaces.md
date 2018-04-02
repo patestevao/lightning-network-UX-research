@@ -181,7 +181,7 @@ The moment of suggesting options and trying them out is really now, so Zap's cho
 
 ### Eclair
 
-Eclair is the mobile wallet built by [ACINQ](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e) and it's idealized already as a Phase 2 wallet, meaning it's supposed to be a global wallet for Bitcoin transactions. Some of those might happen to be Lightning transactions while the others will be blockchain transactions. The idea here is that there shouldn't be a design priority for Lightning activity. All that with the promise of a user-friendly experience.
+Eclair is the mobile wallet built by [ACINQ](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e) and it's idealized already as a Phase 2 wallet, meaning it's supposed to be a generic wallet for Bitcoin transactions. Some of those might happen to be Lightning transactions while the others will be blockchain transactions. The idea here is that there shouldn't be a design priority for Lightning activity. All that with the promise of a user-friendly experience.
 
 For this study, the installed version was the 0.2.5 in an Android version 5.1.
 
@@ -247,7 +247,7 @@ Since it's a lightning transaction, it will appear almost instantly as "paid" in
 
 There's a clear indication through the use of badges of whether the transaction was a lightning or blockchain type. A small suggestion here would be to change the Bitcoin badge for a "chain" badge \(similar to Zap\) since they are all Bitcoin transactions from the user's point of view.
 
-The complete timestamp of the transaction is shown, as well as the number of confirmations for blockchain transactions. This is particularly important as Eclair's objective is to be a global wallet, so easily keeping track of confirmations will be a daily need.
+The complete timestamp of the transaction is shown, as well as the number of confirmations for blockchain transactions. This is particularly important as Eclair's objective is to be a generic wallet, so easily keeping track of confirmations will be a daily need.
 
 The description field is only available for Lightning transactions. It would be a good future improvement to implement the possibility of putting labels in blockchain transactions, as well, to facilitate accounting. This label would replace the Transaction Id shown at the moment, and this Id could be available only on the transaction details page that can be viewed by clicking on the transaction row.
 
