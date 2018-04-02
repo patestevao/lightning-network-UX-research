@@ -6,7 +6,7 @@ The goals of this research can be presented as three broad themes:
 
 2. Visualize how a user interface should be built in order to accommodate the new functions of the Lightning Network and provide a good usability and experience.
 
-3. Review usability aspects and design decisions of the current solutions of graphic interfaces, taking into account the early stage of development they are in.
+3. Review usability aspects and design decisions of the current solutions of graphic user interfaces, taking into account the early stage of development they are in.
 
 
 
