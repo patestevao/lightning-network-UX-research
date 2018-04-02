@@ -35,9 +35,15 @@ The first flow is common to all Bitcoin wallets, not only the ones for the Light
 
 ![](/assets/wallet_greeting.png)
 
+First screen seen by the user.
+
 ![](/assets/wallet_seed.png)
 
+Screen showing wallet seed \(after the user chose to create a new wallet\).
+
 ![](/assets/verify_seed.png)
+
+Screen for mnemonic code verification \(one word at a time\).
 
 Comments about the interface:
 
@@ -68,7 +74,11 @@ The second flow consists of sending a transaction in the Lightning Network. This
 
 ![](/assets/pay_normal_fee.png)
 
+Screen for making a Lightning Network payment.
+
 ![](/assets/pay_high_fee.png)
+
+Screen for making a Lightning Network payment with the warning of an expected high fee.
 
 Comments about the interface:
 
@@ -95,7 +105,11 @@ The third basic flow to be covered is the request for a payment. The publication
 
 ![](/assets/request_lightning.png)
 
+Screen for making a Lightning Network payment request.
+
 ![](/assets/request_blockchain.png)
+
+Screen for a blockchain payment request, i.e. getting an address.
 
 Comments about the interface:
 
@@ -116,6 +130,8 @@ Now that the most basic flows were covered, let's take a look at other relevant 
 
 ![](/assets/dashboard.png)
 
+Screen for the dashboard \(home\) page.
+
 Comments about the interface:
 
 * The PAY and REQUEST button should be the more prominent elements of the screen since they are the main actions a user would need.
@@ -128,6 +144,8 @@ Comments about the interface:
 #### Wallet page
 
 ![](/assets/wallet.png)
+
+Wallet screen, i.e. where transactions are listed.
 
 As for the "wallet" page, where transactions will be shown, the main issue is to make a differentiation between lightning and blockchain transactions. Other options such as being able to filter transactions by type \(blockchain, Lightning Payment, Lightning request, all Lightning\) are also nice to have. Apart from that, the already established best practices for displaying transactions should be applied, such as ordering from most to less recent, showing number of confirmations, displaying the chosen label \(when there is one\), giving a link to a block explorer service, color coding money that has been received and money that has been sent, etc.
 
@@ -144,6 +162,8 @@ Filter for channels based on their status would be a nice to have.
 #### Channels page
 
 ![](/assets/channels.png)
+
+Channels screen, i.e. where open channels are listed.
 
 The last page to be analyzed will be the Lightning channels section. The most important elements to be considered:
 
