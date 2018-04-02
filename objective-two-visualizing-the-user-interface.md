@@ -143,7 +143,7 @@ Comments about the interface:
 
 #### Wallet page
 
-![](/assets/wallet.png)
+![](/assets/channels.png)
 
 Wallet screen, i.e. where transactions are listed.
 
@@ -161,14 +161,14 @@ Filter for channels based on their status would be a nice to have.
 
 #### Channels page
 
-![](/assets/channels.png)
+![](/assets/wallet.png)
 
 Channels screen, i.e. where open channels are listed.
 
-The last page to be analyzed will be the Lightning channels section. The most important elements to be considered:
+In the Lightning channels section, the most important elements to be considered:
 
 * List of channels with information about the peer, amount commited and the current status of the channel.
-* Possibility of manually opening a channel with a specific peer.
+* Possibility of manually opening a channel with a specific peer, even though it's an advanced feature.
 * Filter for channels based on their status would be a nice to have.
 
 ## Phase 2 wallets
