@@ -1,6 +1,6 @@
 # Objective two: Visualizing the user interface
 
-The stage of restricted use and high risk described in Objective 1 is expected to end in its due time when the development reaches a more mature state and the Lightning Network will evolve to be part of regular user interfaces, as it is the case with common Bitcoin wallets. The mental exploration of what those interfaces should look like is the second objective of this study.The stage of restricted use and high risk described in Objective 1 is expected to end in its due time when the development reaches a more mature state and the Lightning Network will evolve to be part of regular user interfaces, as it is the case with common Bitcoin wallets. The mental exploration of what those interfaces should look like is the second objective of this study.
+The stage of restricted use and high risk described in Objective 1 is expected to end in its due time when the development reaches a more mature state and the Lightning Network will evolve to be part of regular user interfaces, as it is the case with common Bitcoin wallets. The mental exploration of what those interfaces should look like is the second objective of this study.
 
 ## Phase 1 wallets
 
@@ -57,12 +57,12 @@ Comments about the interface:
 
 The second flow consists of sending a transaction in the Lightning Network. This scenario counts on the user having external access to the payment request he wants to send money to.
 
-1.     Wants to send a transaction via Lightning Network.
-2.     Opens payment section.
-3.     Pastes/writes/scans payment code/address.
-4.     Writes amount to be sent \(in case it wasn't specified in the payment code\).
-5.     Optionally, writes a label for that transaction.
-6.     Hits "PAY".
+1. Wants to send a transaction via Lightning Network.
+2. Opens payment section.
+3. Pastes/writes/scans payment code/address.
+4. Writes amount to be sent \(in case it wasn't specified in the payment code\).
+5. Optionally, writes a label for that transaction.
+6. Hits "PAY".
 
 #### Payment page
 
@@ -83,13 +83,13 @@ Comments about the interface:
 
 The third basic flow to be covered is the request for a payment. The publication of the payment information will be handled outside the wallet client \(e.g. sending by e-mail\), unless the payer is physically present and, consequently, able to scan the QR code information.
 
-1.     Wants to receive a transaction via Lightning Network
-2.     Opens request section.
-3.     Optionally writes amount to be requested.
-4.     Optionally writes a label for the request.
-5.     Clicks "REQUEST" button.
-6.     Sends/publishes payment request.
-7.     Waits for payment to be completed by the other party.
+1. Wants to receive a transaction via Lightning Network
+2. Opens request section.
+3. Optionally writes amount to be requested.
+4. Optionally writes a label for the request.
+5. Clicks "REQUEST" button.
+6. Sends/publishes payment request.
+7. Waits for payment to be completed by the other party.
 
 #### Request page
 
@@ -133,13 +133,13 @@ As for the "wallet" page, where transactions will be shown, the main issue is to
 
 In this particular sketch of a mobile wallet, the transaction rows are links to the expanded transaction information, due to the lack of space for directly displaying everything.The last page to be analyzed will be the Lightning channels section. These are most important elements to be considered:
 
+```
+List of channels with information about the peer, amount committed and the current status of the channel.
 
+The possibility of manually opening a channel with a specific peer.
 
-    List of channels with information about the peer, amount committed and the current status of the channel.
-
-    The possibility of manually opening a channel with a specific peer.
-
-    Filter for channels based on their status would be a nice to have.
+Filter for channels based on their status would be a nice to have.
+```
 
 #### Channels page
 
@@ -157,11 +157,11 @@ Phase 2 wallets will be the clients developed in a future state of the network w
 
 Let's explore the same three activities we analyzed on Phase 1 wallets to see what changes should be expected in this new type of wallet.
 
-##### 1. Wallet setting 
+##### 1. Wallet setting
 
 It will be based on the same principles, so no further analysis is necessary.
 
-##### 2. Sending payment and 3. Requesting payment 
+##### 2. Sending payment and 3. Requesting payment
 
 * The basic flow should be exactly the same, only, now, the wallet will have both blockchain and lightning transactions with the same degree of importance to the user. 
 * On the REQUEST page, a more advanced option of for blockchain transactions should be implemented, giving the user the possibility of creating an advanced request \(with the amount already filled in\). In order to avoid unnecessary clutter, since it's very common for users to just want the address, this should be hidden under a "advanced options" link.
