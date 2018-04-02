@@ -10,11 +10,11 @@ Nevertheless, the evolution is going on full-steam and the situation might chang
 
 ###### Visualize how a user interface should be built in order to accommodate the new functions of the Lightning Network and provide a good usability and experience.
 
-The interface that was described
+The interface that was described has served its purpose of highlighting the elements and the thought process that the creation team of a wallet should have in mind. Giving visual priority to the actions that are expected to be more used, balancing the amount of information that should be displayed in order to avoid clutter, and creating constraints to improve user security are all examples of the necessary priorities that pave the way to a wallet with a good user experience. The exact structure that was proposed can be used as inspiration for other projects, as well, but it's not necessary to do so if the underlying concept is being preserved.
 
-As it would be with any other technology, be it groundbreaking or something people are accostumed to, the design principles which should be used as guidance are the same. Having in mind the ten heuristics used in this analysis, for example, can help developers think better about a product from the user perspectice. Obeying the [Gestalt principles](http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm) for a clear and easily comprehensible layout are another important approach.
+As it would be with any other technology, be it groundbreaking or something people are accostumed to, the design principles which should be used as guidance are the same. The ten heuristics used in this analysis, for example, can help developers think better about a product from the user perspectice. Obeying the [Gestalt principles](http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm) for a clear and easily comprehensible layout are another important approach. And, in a more advanced stage, observing how your users react to and use your product is one of the most insightful measures to improve the UX.
 
-###### Review usability aspects and design decisions of the current solutions of graphic interfaces, taking into account the early stage of development they are in.
+###### Review usability aspects and design decisions of the current solutions of graphic user nterfaces, taking into account the early stage of development they are in.
 
 
 
