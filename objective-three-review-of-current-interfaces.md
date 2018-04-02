@@ -181,7 +181,7 @@ The moment of suggesting options and trying them out is really now, so Zap's cho
 
 ### Eclair
 
-Eclair is the mobile wallet built by [ACINQ](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e) and it's idealized already as a Phase 2 wallet, meaning it's supposed to be a generic wallet for Bitcoin transactions. Some of those might happen to be Lightning transactions while the others will be blockchain transactions. The idea here is that there shouldn't be a design priority for Lightning activity. All that with the promise of a user-friendly experience.
+Eclair is the mobile wallet built by [ACINQ](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e) and it's idealized already as a Phase 2 wallet, meaning it's supposed to be a general purpose wallet for Bitcoin transactions. Some of those might happen to be Lightning transactions while the others will be blockchain transactions. The idea here is that there shouldn't be a design priority for Lightning activity. All that with the promise of a user-friendly experience.
 
 For this study, the installed version was the 0.2.5 in an Android version 5.1.
 
@@ -247,7 +247,7 @@ Since it's a lightning transaction, it will appear almost instantly as "paid" in
 
 There's a clear indication through the use of badges of whether the transaction was a lightning or blockchain type. A small suggestion here would be to change the Bitcoin badge for a "chain" badge \(similar to Zap\) since they are all Bitcoin transactions from the user's point of view.
 
-The complete timestamp of the transaction is shown, as well as the number of confirmations for blockchain transactions. This is particularly important as Eclair's objective is to be a generic wallet, so easily keeping track of confirmations will be a daily need.
+The complete timestamp of the transaction is shown, as well as the number of confirmations for blockchain transactions. This is particularly important as Eclair's objective is to be a general purpose wallet, so easily keeping track of confirmations will be a daily need.
 
 The description field is only available for Lightning transactions. It would be a good future improvement to implement the possibility of putting labels in blockchain transactions, as well, to facilitate accounting. This label would replace the Transaction Id shown at the moment, and this Id could be available only on the transaction details page that can be viewed by clicking on the transaction row.
 
@@ -261,7 +261,7 @@ As it was said before, Eclair doesn't currently support the request of Lightning
 
 ![](/assets/eclair_22.png)
 
-Eclair counts with a more modest view of the current state of the network, but it's more than enough for a regular user. It's further aligned with the suggestion this study made earlier when analyzing the Zap interface because it keeps this network section in a hidden menu, so it doesn't compete for attention with more important elements. Also, it presents information about both the blockchain and the Lightning network, which makes sense with the intention of being a generic wallet.
+Eclair counts with a more modest view of the current state of the network, but it's more than enough for a regular user. It's further aligned with the suggestion this study made earlier when analyzing the Zap interface because it keeps this network section in a hidden menu, so it doesn't compete for attention with more important elements. Also, it presents information about both the blockchain and the Lightning network, which makes sense with the intention of being a general purpose wallet.
 
 The approach that the Eclair's team seem to be taking is to make things work with few features to later increment them, so it looks like a very promising development. For the future phases, this study will leave the suggestion of increasing user freedom and control over some actions, for instance: allowing typing in input fields, adding custom label options and allowing to create payments with a pre-defined requested amount \(both for the blockchain and the Lightning Network\).
 
