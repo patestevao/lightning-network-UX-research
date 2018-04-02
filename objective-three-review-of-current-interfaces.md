@@ -191,7 +191,7 @@ When you first start the wallet, you can see that it's already providing a setup
 
 It violates some aspects of what was described in the setup flow in Objective 2, such as the proper spacing, alignment and numeric cues for the mnemonic code. However, since the focus of the analysis is the Lightning activity and the team might have the improvement of this page on their roadmap, we'll take the option of skipping the backup altogether \(that will only be the case because it's a testnet wallet\).
 
-A first important distinction of Eclair is that it takes advantage of the first moment the user arrives in the app to give a very short but very useful tour through the wallet. That doesn't take away the importance of an intuitive and clear interface, but it does make the user more comfortable with this first contact. It's important to notice that the positive impact of the tour would rapidly be lost and turned into annoyance and over-informing if the explanation was too long, whether it was occasioned by long explanation texts or by too many points being explained.
+A first important distinction of Eclair is that it takes advantage of the first moment the user arrives in the app to give a very short but very useful tour through the wallet. That doesn't take away the importance of an intuitive and clear interface, but it does make the user more comfortable with this first contact. It's important to notice that the positive impact of the tour would rapidly be lost and turned into annoyance and over-informing if the explanation was too long — whether it was occasioned by long explanation texts or by too many points being explained —, which is not the case with Eclair.
 
 ![](/assets/eclair_16.png)
 
@@ -199,7 +199,7 @@ So, now that we need to fund the wallet before beginning the payment task, as it
 
 ![](/assets/eclair_1.png)
 
-After funding, we'll make a similar purchase as it was done with the other wallets, using Starblocks. We have an idea of where to go for the payment because of the tour but, buy now, the user could have already forgotten the instructions, he could even have waited days from the moment he started the wallet to his first Lightning transaction. That's why a clear interface should always be the priority.
+After funding, we'll make a similar purchase as it was done with the other wallets, using Starblocks. We have an idea of where to go for the payment because of the tour but, by now, the user could have already forgotten the instructions, and he could even have waited days from the moment he started the wallet to his first Lightning transaction. That's why a clear interface should always be the priority.
 
 ![](/assets/eclair_18.png)
 

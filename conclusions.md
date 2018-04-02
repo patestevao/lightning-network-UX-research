@@ -10,6 +10,8 @@ Nevertheless, the evolution is going on full-steam and the situation might chang
 
 ###### Visualize how a user interface should be built in order to accommodate the new functions of the Lightning Network and provide a good usability and experience.
 
+
+
 ###### Review usability aspects and design decisions of the current solutions of graphic interfaces, taking into account the early stage of development they are in.
 
 
