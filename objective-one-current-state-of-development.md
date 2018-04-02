@@ -12,7 +12,7 @@ Nevertheless, the task was successfully carried out through these steps:
 2. Install and configure c-lightning \(lightningd\):
    1. Create wallet
    2. Run it connected to bitcoind
-3. Get `newaddr` and fund the wallet.
+3. Get `newaddr` and fund the lightningd wallet.
 4. Wait for confirmations of the funding.
 5. Connect to another node.
 6. Set a transaction fee for the Bitcoin node.
