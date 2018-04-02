@@ -20,5 +20,5 @@ Nevertheless, the task was successfully carried out through these steps:
 8. Go to Blockstream's store, add items to basket and proceed to checkout, where you get a Lightning payment request.
 9. Decode payment request, find a route and send the transaction.
 
-The process is not particularly complex for users who know how to use the wallet through the CLI, but all the others \(Luke and Jennifer\) will have to wait until they are able to use it. In addition, the moment now is essentially for tests and development of new solutions and structures. Even for technically-able users, the system is still too risky to be considered ready for use.
+The process is not particularly complex for users who know how to use the wallet through the CLI, but all the others \(Luke and Jennifer\) will have to wait until they are able to use it. In addition, the moment now is essentially for tests and development of new solutions and structures. Even for technically-able users, the system and the tools that surround it are still too risky to be considered ready for use.
 
