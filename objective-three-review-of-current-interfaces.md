@@ -42,7 +42,7 @@ The second step is to request a payment, which is made in the Receive tab by ent
 
 ![](/assets/HTLC_12.png)
 
-After generating the payment, the code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option \(the button with a bell icon\) is also provided for enabling browser notification when the payment is received. The button with a "reload" icon remains a mystery as its function couldn't be understood. If there was a title tag on the image, it could have given a better explanation of its purpose but, in this current setup, it's a button with no apparent effect when pressed.
+After generating the payment, the code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option \(the button with a bell icon\) is also provided for enabling browser notification when the payment is received. The button with a "reload" was a bit unclear. Its function is to refresh the status of the payment, at the same time that the wallet does this refresh task automatically, so it ends up being a button with no apparent function. Since the button is probably there to cover the case when the wallet doesn't refresh automatically, maybe there could be a title tag on the image saying "Force refresh". It would give a better explanation of its purpose.
 
 ![](/assets/HTLC_13.png)
 
@@ -110,7 +110,7 @@ Let's hit pay.
 
 ![](/assets/zap_15.png)
 
-The transaction couldn't go through because there isn't a path to the peer we tried to pay. This means that Zap is one of the wallets which is being initially developed requiring users to open they own channels by hand every time they need. We aren't going to deeply analyze this process because this study's recommendation is that this situation is reverted before the software is actually released for users on the mainnet. But we'll go quickly through the steps since they will be necessary to complete the task of sending a payment.
+The transaction couldn't go through because there isn't a path to the peer we tried to pay. This means that Zap is one of the wallets which is being initially developed requiring users to open their own channels by hand every time they need. We aren't going to deeply analyze this process because this study's recommendation is that this situation is reverted before the software is actually released for users on the mainnet. But we'll go quickly through the steps since they will be necessary to complete the task of sending a payment.
 
 ![](/assets/zap_18.png)
 
@@ -147,7 +147,7 @@ After a few transactions, here's what the wallet page will look like:
 
 ![](/assets/zap_10.png)
 
-It perfectly represents the segmentation between Lightning and blockchain transactions, although the "Request BTC" and "Sent BTC" labels get quite repetitive. That space could be occupied by a more informative label that will help the user identify transactions. The knowledge of how much was requested or sent is conveyed through the positive or negative numbers in the right. It would be even clearer if the numbers were properly color coded as well. At the moment, the only differentiation by color is that for the received blockchain transactions.
+It perfectly represents the segmentation between Lightning and blockchain transactions, although the "Requested BTC" and "Sent BTC" labels get quite repetitive. That space could be occupied by a more informative label that will help the user identify transactions. The knowledge of how much was requested or sent is conveyed through the positive or negative numbers in the right. It would be even clearer if the numbers were properly color coded as well. At the moment, the only differentiation by color is that for the received blockchain transactions.
 
 ![](/assets/zap_20.png)
 
