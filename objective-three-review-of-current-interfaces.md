@@ -56,7 +56,21 @@ Note that no manual channel opening was required until now. That's because HTLC.
 
 That's exactly what was mentioned before about removing the burden of opening channels of the user's shoulders, and HTLC.me does it quite well. What it apparently doesn't cover is the possibility of a user wanting to open a channel with a specific peer that doesn't appear in the directory.
 
-The Network directory is also where the user's own peer address is shown, which, even though is not the placement that was suggested in Objective 2, it is a place that makes contextual sense.
+The Network directory is also where the user's own peer address is shown, which, even though is not the placement that was suggested in Objective 2, it's a place that makes contextual sense.
+
+One last adittion about HTLC.me is that, even though there's no place to manually add a peer or open a channel in the regular interface, we did find a way to connect to new peers that is only shown in a specific context. It happens when the user tries to make a payment but the wallet encounters a network error.
+
+\(HTLC\_14\)
+
+In this moment, the wallet asks if the user knows the address of the peer he wants to pay. If he clicks, he sees the following:
+
+\(HTLC\_15\)
+
+That's actually a very good context to display this option since it won't be needed in a regular situation that a path can automatically be found to complete the payment. 
+
+Finally, it gives the feedback after the peer addition is requested.
+
+\(HTLC\_16\)
 
 ### Zap
 
@@ -173,9 +187,9 @@ Although not clearly visible at first, a repeated mistake during the wallet's op
 
 The Network section of the wallet is an interesting visualization model for the discovered Lightning Network and it seems to be going in the right direction in terms of making the map easy to understand and to visualize peer information. It couldn't be explored very well during this study due to still unresolved development problems, but one observation can already be made: is it really something to be in the same hierarchical importance as the "wallet" section? Especially when the auto-management of channels is implemented, this section shouldn't be so prominent as it has less practical use on daily user activities.
 
-To finish the analysis over the Zap wallet, a few comments will be made about the analogy system adopted by Zap that refers to channels as contacts. It is, indeed, a way to make users feel more familiar with the operation of the wallet as they use "add contact" features every day in their lives. As for an "open channel" instruction, it requires immediate new learning and it might create resistance. 
+To finish the analysis over the Zap wallet, a few comments will be made about the analogy system adopted by Zap that refers to channels as contacts. It is, indeed, a way to make users feel more familiar with the operation of the wallet as they use "add contact" features every day in their lives. As for an "open channel" instruction, it requires immediate new learning and it might create resistance.
 
-But, sometimes, the lack of familiarity is necessary for the user to understand that it is something new that he should be paying attention to. For example, the issue with the amount that is committed per channel being too subtle in the interface is exacerbated by the lack of need for it in the contact conceptual model. Why would someone need to choose an amount to add a contact to a contact list? The issue with the multiple channels opened with the same peer also brings confusion, but it could be solved by the appropriate grouping of channels. 
+But, sometimes, the lack of familiarity is necessary for the user to understand that it is something new that he should be paying attention to. For example, the issue with the amount that is committed per channel being too subtle in the interface is exacerbated by the lack of need for it in the contact conceptual model. Why would someone need to choose an amount to add a contact to a contact list? The issue with the multiple channels opened with the same peer also brings confusion, but it could be solved by the appropriate grouping of channels.
 
 Another issue with this analogy is that, when someone thinks about adding contacts, he usually thinks "the more the better" or, at least, that it doesn't hurt to have a lot of contacts. In this case, it may hurt because you have to commit money to every new contact you add. Also, a person will want to add all their friends and family members as contacts, which is not really useful here and results in money committed to channels, as well.
 
