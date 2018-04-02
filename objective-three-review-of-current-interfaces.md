@@ -263,7 +263,7 @@ As is was said before, Eclair doesn't currently support the request of Lightning
 
 ![](/assets/eclair_22.png)
 
-Eclair counts with a more modest view of the current state of the network, but it's more than enough for a regular user. It's further aligned with the suggestion this study made earlier when analyzing the Zap interface because it keeps this network section in a hidden menu, so it doesn't compete for attention with more important elements. Also, it presents information about both the blockchain and the Lightning network, which makes sense with the intention of being an "all-purpose" wallet.
+Eclair counts with a more modest view of the current state of the network, but it's more than enough for a regular user. It's further aligned with the suggestion this study made earlier when analyzing the Zap interface because it keeps this network section in a hidden menu, so it doesn't compete for attention with more important elements. Also, it presents information about both the blockchain and the Lightning network, which makes sense with the intention of being a generic wallet.
 
 The approach that the Eclair's team seem to be taking is to make things work with few features to later increment them, so it looks like a very promising development. For the future phases, this study will leave the suggestion of increasing user freedom and control over some actions, for instance: allowing typing in input fields, adding custom label options and allowing to create payments with a pre-defined requested amount \(both for the blockchain and the Lightning Network\).
 

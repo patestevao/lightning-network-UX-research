@@ -131,7 +131,7 @@ Comments about the interface:
 
 As for the "wallet" page, where transactions will be shown, the main issue is to make a differentiation between lightning and blockchain transactions. Other options such as being able to filter transactions by type \(blockchain, Lightning Payment, Lightning request, all Lightning\) are also nice to have. Apart from that, the already established best practices for displaying transactions should be applied, such as ordering from most to less recent, showing number of confirmations, displaying the chosen label \(when there is one\), giving a link to a block explorer service, color coding money that has been received and money that has been sent, etc.
 
-In this particular sketch of a mobile wallet, the transaction rows are links to the expanded transaction information, due to the lack of space for directly displaying everything.The last page to be analyzed will be the Lightning channels section. These are most important elements to be considered:
+In this particular sketch of a mobile wallet, the transaction rows are links to the expanded transaction information, due to the lack of space for directly displaying everything.The last page to be analyzed will be the Lightning channels section. These are the most important elements to be considered:
 
 ```
 List of channels with information about the peer, amount committed and the current status of the channel.
