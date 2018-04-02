@@ -28,3 +28,9 @@ The summarized explanation for each principle can be found in the [author’s ar
 
 In order to guide the evaluators, the research also included a simplified construct of user personas and journeys. They were formed based on a general manifestation of the user's profile and objectives which can be taken of public space discussions such as social media.
 
+#### Note on the moment chosen for this study
+
+One might ask if it was a good choice to carry out such a study right now, as the current state of the Lightning Network implementations and interfaces is still premature. 
+
+When we talk about the creation of a product/technology, many cycles compose the development process, from the conceptualization to the usable version, passing through sketches, brainstorms, tests, implementation phases, etc. And the concern about the user experience is as much a part of all these steps as the writing of code itself. That is, if the desired result is a product that can be used by its public audience. That's because design decisions about how the interaction should be implemented are occurring all the time and, the sooner misconceptions are discovered and turned into better decisions, the easier it is to transform the product. That's why it's worth it to do this UX review even if there's so much unfinished and unpolished. We hope that giving some insights in this early period, we'll be helping the software creators to point their efforts in the right direction.
+
