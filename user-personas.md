@@ -4,11 +4,11 @@
 
 ###### Back-end developer for an e-commerce company.
 
-John is an experienced enough programmer to know his way around Bitcoin. Although not a cryptographer or a cryptocurrency specialist, he has played a bit with things like smart contracts and wallets. He likes being able to have full control of his installations and software preferences and, in some cases, he might even feel more comfortable with a CLI than with a graphic user interface. He has decided to try to follow a tutorial he found and be one of the first to use the Lightning Network.
+John is a programmer experienced enough to know his way around Bitcoin. Although not a cryptographer or a cryptocurrency specialist, he has played a bit with things like smart contracts and wallets. He likes being able to have full control of his installations and software preferences and, in some cases, he might even feel more comfortable with a CLI than with a graphic user interface. He has decided to try to follow a tutorial he found online and be one of the first ones to use the Lightning Network.
 
 #### 2. Luke, The Bitcoin enthusiast
 
-###### Tourist guide and tuk-tuk driver in Lisbon.
+###### Barista in a trendy coffee shop in Lisbon.
 
 Luke has been watching Bitcoin for a few years now and has seen many of its ups and downs. He's a convict Bitcoin supporter. He doesn't know many technical details, but has already used a variety of different wallet apps and is always tuned in what's new. Now, he's eager to try the Lightning Network and experience the "instant coffee buying" but he has no idea of how to use the CLI. So, even though he's willing to be one of the testers and even to risk a small amount of money, he needs a graphic user interface to do it.
 
