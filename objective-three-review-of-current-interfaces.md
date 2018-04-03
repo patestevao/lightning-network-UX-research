@@ -42,7 +42,7 @@ The second step is to request a payment, which is made in the Receive tab by ent
 
 ![](/assets/HTLC_12.png)
 
-After generating the payment, the code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option \(the button with a bell icon\) is also provided for enabling browser notification when the payment is received. The button with a "reload" was a bit unclear. Its function is to refresh the status of the payment, at the same time that the wallet does this refresh task automatically, so it ends up being a button with no apparent function. Since the button is probably there to cover the case when the wallet doesn't refresh automatically, maybe there could be a title tag on the image saying "Force refresh". It would give a better explanation of its purpose.
+After generating the payment, the code is displayed with the possibility of copying and visualizing as a QR code, as well as with a link that directly opens a wallet application on the device. A notification option \(the button with a bell icon\) is also provided for enabling browser notification when the payment is received. The button with a "reload" icon was a bit unclear. Its function is to refresh the status of the payment, at the same time that the wallet does this refresh task automatically, so it ends up being a button with no apparent function. Since the button is probably there to cover the case when the wallet doesn't refresh automatically, maybe there could be a title tag on the image saying "Force refresh". It would give a better explanation of its purpose.
 
 ![](/assets/HTLC_13.png)
 
