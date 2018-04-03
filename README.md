@@ -18,7 +18,7 @@ The research and the preparation of this written material were conducted between
 
 ## Motivation
 
-As a new piece of technology that is to be plugged on Bitcoin, the Lightning Network has the potential to vastly improve Bitcoin's — and, possibly, other crypto-currencies that adopt it — scalability and user experience by creating new possibilities and use cases.
+As a new piece of technology that is to be plugged on Bitcoin, the Lightning Network has the potential to vastly improve Bitcoin's — and, possibly, other cryptocurrencies that adopt it — scalability and user experience by creating new possibilities and use cases.
 
 My objective with this compact study is to contribute with the Lightning Network adoption and user experience by analyzing some of the expected changes — if any — in usability that may be felt by users and presenting some possible approaches to make this adaptation a smooth and comprehensible process.
 
