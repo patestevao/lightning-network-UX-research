@@ -151,13 +151,12 @@ As for the "wallet" page, where transactions will be shown, the main issue is to
 
 In this particular sketch of a mobile wallet, the transaction rows are links to the expanded transaction information, due to the lack of space for directly displaying everything.The last page to be analyzed will be the Lightning channels section. These are the most important elements to be considered:
 
-```
-List of channels with information about the peer, amount committed and the current status of the channel.
+* List of channels with information about the peer, amount committed and the current status of the channel.
 
-The possibility of manually opening a channel with a specific peer.
+* The possibility of manually opening a channel with a specific peer.
 
-Filter for channels based on their status would be a nice to have.
-```
+* Filter for channels based on their status would be a nice to have.
+
 
 #### Channels page
 
