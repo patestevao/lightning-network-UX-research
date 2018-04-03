@@ -58,19 +58,19 @@ That's exactly what was mentioned before about removing the burden of opening ch
 
 The Network directory is also where the user's own peer address is shown, which, even though is not the placement that was suggested in Objective 2, it's a place that makes contextual sense.
 
-One last adittion about HTLC.me is that, even though there's no place to manually add a peer or open a channel in the regular interface, we did find a way to connect to new peers that is only shown in a specific context. It happens when the user tries to make a payment but the wallet encounters a network error.
+One last adittion about HTLC.me is that, even though there's no place to manually add a peer or open a channel in the regular interface, we did find a way to connect to new peers that is only shown in a specific context of the wallet. It happens when the user tries to make a payment but the wallet encounters a network error.
 
-\(HTLC\_14\)
+![](/assets/HTLC_14.png)
 
 In this moment, the wallet asks if the user knows the address of the peer he wants to pay. If he clicks, he sees the following:
 
-\(HTLC\_15\)
+![](/assets/HTLC_15.png)
 
-That's actually a very good context to display this option since it won't be needed in a regular situation that a path can automatically be found to complete the payment.
+That's actually a very good context to display this option since it won't be needed in a regular situation that a path can automatically be found to complete the payment. And it gives a short but good explanation of why that's appearing there and what to expect.
 
 Finally, it gives the feedback after the peer addition is requested.
 
-\(HTLC\_16\)
+![](/assets/HTLC_16.png)
 
 ### Zap
 
