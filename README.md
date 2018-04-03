@@ -12,9 +12,7 @@ As the Bitcoin Lightning Network comes to life thanks to the work of various pro
 
 # Timeline
 
-The research and the preparation of this written material were conducted between February 16th and the end of March, 2018. The timeline below gives a sense of perspective with two other important events for the Lightning Network development.
-
-![](/assets/timeline.png)
+The research and the preparation of this written material were conducted between February 16th and the end of March, 2018. The timeline below gives a sense of perspective with two other important events for the Lightning Network development.![](/assets/timeline.png)
 
 ## Motivation
 
