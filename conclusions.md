@@ -2,7 +2,7 @@
 
 After conducting the research in its entirety, a straightforward answer can be given, using the knowledge and data collected along the way, for each of the objectives defined at the beginning of this document.
 
-###### Identify the current state of development of the Lightning Network in relation to how ready it is for regular use \(i.e. not only specialized testing\).
+###### Identify the current state of development of the Lightning Network in relation to how ready it is for regular use \(i.e. not only specialized testing\) on the mainnet.
 
 The current state is considered to be **not ready for use** unless the user's purpose is to test and aid the network development. Even in that case, the only apt user, at the moment, is a technical expert user who can perform all the necessary operations without the help of a graphic user interface. That's not a failure of any type by the developers of the Lightning Network, it's just a part of a healthy development timeline conducted by serious professionals. It would be irresponsible to consider it completely ready at the moment.
 

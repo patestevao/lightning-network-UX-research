@@ -66,7 +66,7 @@ In this moment, the wallet asks if the user knows the address of the peer he wan
 
 \(HTLC\_15\)
 
-That's actually a very good context to display this option since it won't be needed in a regular situation that a path can automatically be found to complete the payment. 
+That's actually a very good context to display this option since it won't be needed in a regular situation that a path can automatically be found to complete the payment.
 
 Finally, it gives the feedback after the peer addition is requested.
 
@@ -126,7 +126,7 @@ Let's hit pay.
 
 The transaction couldn't go through because there isn't a path to the peer we tried to pay. This means that Zap is one of the wallets which is being initially developed requiring users to open their own channels by hand every time they need. We aren't going to deeply analyze this process because this study's recommendation is that this situation is reverted before the software is actually released for users on the mainnet. But we'll go quickly through the steps since they will be necessary to complete the task of sending a payment.
 
-![](/assets/zap_18.png)
+![](/assets/zap_2.png)
 
 That's the page for adding a new contact, i.e., opening a channel. Some of the main perceived issues are:
 
