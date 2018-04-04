@@ -221,11 +221,11 @@ After funding, we'll make a similar purchase as it was done with the other walle
 
 ![](/assets/eclair_18.png)
 
-In this case, although it looks very good aesthetically, the button for sending a transaction doesn't draw enough attention to itself. It does follow a common pattern in mobile apps that put a small circular button on the bottom right corner of the page, and the chosen icon does convey the "send" message. But, if the choice of not having a clear "PAY" button available is to be maintained, this circular button should, at least, be in a different and more bright color and, possibly, a little larger.
+In this case, although it looks very good aesthetically, the button for sending a transaction doesn't draw enough attention to itself. It does follow a common pattern in mobile apps that put a small circular button on the bottom right corner of the page, and the chosen icon does convey the "send" message. But, if the choice of not having a clear "PAY" button available is to be maintained, this circular button should, at least, be in a different and more bright color.
 
 This also raises the question of where will the button for a Lightning network request be in the future. As they properly explain in [their post](https://medium.com/@ACINQ/announcing-eclair-wallet-a8d8c136fc7e), the Eclair team justifies that the request of Lightning payments is disabled for the moment so that it doesn't appear as a broken feature until the proper backend structure is ready. But this will be available sometime in the future, which might lead to a questioning of the current "SEND" button. If the same button is to be used for payment and requests, the paper airplane icon used will be inappropriate, as it doesn't convey the message of "requesting", and should be replaced with something more generic for financial transactions. If it isn't placed in the same button, it will either mean that another button will be displayed on the transactions page or that this functionality will be moved to a different page. In the first case, the pattern of the circular button will make less sense, as it is normally used as one button only. In the second case, it will probably result in the "Your Bitcoin Address" section being transformed into a generic "payment request" section. No matter what choice is made, it will probably result in a revision of this "SEND" button.
 
-Using it as it is now, the "SEND" button gives the choice of both pasting or scanning a payment request. The pasting only works if the code was previously copied by the device, it doesn't show an input field and it completely blocks the user from the possibility of writing the code by hand. Even though the manual copying should be very discouraged, its prohibition takes away a flexibility that might be needed in specific situations.
+Using it as it is now, the "SEND" button gives the choice of both pasting or scanning a payment request. The pasting only works if the code was previously copied by the device, which is not obvious and might lead to a mistake in the first time the user performs the operation.
 
 ![](/assets/eclair_19.png)
 
@@ -233,11 +233,11 @@ As the payment request is scanned, a message tells the user that he needs to man
 
 ![](/assets/eclair_17.png)
 
-In the Lightning channels page, we see a small instruction taking advantage of the empty space, as it was suggested previously for the Zap wallet. Also, the "NEW" button already calls more attention to itself due to its bright green color, as suggested above for the "SEND" button, even though it could be slightly larger as well.
+In the Lightning channels page, we see a small instruction taking advantage of the empty space, as it was suggested previously for the Zap wallet. Also, the "NEW" button already calls more attention to itself due to its bright green color, as suggested above for the "SEND" button.
 
 ![](/assets/eclair_0.png)
 
-The three options provided for opening a new channel are pasting or scanning a node URI and auto-connecting. Again, there is a constraint that doesn't allow a manual input of the URI, neither there is a search option for peers.
+The three options provided for opening a new channel are pasting or scanning a node URI and auto-connecting. It would be nice, in the future, to have a way to a search for peers, similar to what Zap is implementing.
 
 The auto-connect option is, from what can be understood in the blog post, a kind of pre-implementation of an auto-management of channels. Only it's not really clear if the auto-management will take place automatically or if the user will need to deliberately ask for it in this option. For now, it's a hacked self-bootstrapping for the wallet that might as well serve its function, even with the underlying structure still under construction. That's the option we will choose now.
 
